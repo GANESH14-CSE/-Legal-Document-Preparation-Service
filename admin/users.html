@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Accounts — LexDraft Admin</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Site Header Navbar -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="../index.html" class="brand-logo"><i data-lucide="scale" style="color: var(--gold);"></i>Lex<span>Draft</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html" class="nav-link">Home 1</a></li>
+        <li><a href="../home2.html" class="nav-link">Home 2</a></li>
+        <li><a href="../about.html" class="nav-link">About</a></li>
+        <li><a href="../services.html" class="nav-link">Services</a></li>
+        <li><a href="../blogs.html" class="nav-link">Blogs</a></li>
+        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <span class="badge badge-warning" style="display: flex; align-items: center; gap: 4px;">
+          <i data-lucide="shield" style="width: 14px; height: 14px;"></i> ADMINISTRATOR
+        </span>
+        <a href="../login.html" class="btn btn-ghost btn-sm" style="color: var(--danger);">Sign Out</a>
+        <button id="mobile-menu-btn" class="btn btn-ghost mobile-toggle-btn" aria-label="Toggle Navigation">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout-with-sidebar">
+    <aside class="sidebar">
+      <div style="padding: 12px 16px; font-size: 11px; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em;">Admin Control Panel</div>
+      <a href="index.html" class="sidebar-link"><i data-lucide="layout-dashboard"></i> Analytics Overview</a>
+      <a href="users.html" class="sidebar-link active"><i data-lucide="users"></i> User Accounts</a>
+      <a href="documents.html" class="sidebar-link"><i data-lucide="files"></i> Document Audit</a>
+      <a href="templates.html" class="sidebar-link"><i data-lucide="sliders"></i> Template Manager</a>
+    </aside>
+
+    <main class="main-content space-y-6">
+      <div class="card space-y-4">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <h2>Registered User Accounts</h2>
+            <p style="font-size: 14px; color: var(--muted);">Audit active client accounts, permission roles, and registration dates.</p>
+          </div>
+          <button class="btn btn-gold btn-sm" onclick="window.showToast('User invitation dialog opened')">+ Provision New Account</button>
+        </div>
+        
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>User Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Joined Date</th>
+                <th style="text-align: right;">Action</th>
+              </tr>
+            </thead>
+            <tbody id="admin-users-body">
+              <!-- Rendered via js/data/adminDemo.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Full Rich 4-Column Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="../index.html" class="brand-logo" style="color: var(--white);">Lex<span>Draft</span></a>
+          <p style="color: #94A3B8; font-size: 14px; margin-top: 12px;">LexDraft provides self-guided legal document preparation software tools. Simple, transparent, and accessible estate document generation.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Documents</h4>
+          <ul class="footer-links">
+            <li><a href="../wizard/will.html">Last Will & Testament</a></li>
+            <li><a href="../wizard/poa.html">Power of Attorney</a></li>
+            <li><a href="../wizard/affidavit.html">Sworn Affidavit</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="../about.html">About Us</a></li>
+            <li><a href="../services.html">Legal Services</a></li>
+            <li><a href="../blogs.html">Knowledge Hub</a></li>
+            <li><a href="../contact.html">Contact Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal & Security</h4>
+          <ul class="footer-links">
+            <li><a href="../privacy.html">Privacy Policy</a></li>
+            <li><a href="../login.html">Client Sign In</a></li>
+            <li><a href="index.html">Admin Panel</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer">
+        <strong>LEGAL DISCLAIMER:</strong> Legal requirements vary by jurisdiction. This tool helps you prepare a draft document; consider consulting a licensed professional for your specific situation. This platform does not provide legal advice or legal representation.
+        <div style="margin-top: 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+          <span>&copy; <span id="footer-year">2026</span> LexDraft Systems. All Rights Reserved.</span>
+          <div>
+            <a href="../privacy.html" style="color: #64748B; margin-left: 16px;">Privacy</a>
+            <a href="../privacy.html" style="color: #64748B; margin-left: 16px;">Terms</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/main.js"></script>
+  <script type="module" src="../js/navigation.js"></script>
+  <script type="module" src="../js/data/adminDemo.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const tbody = document.getElementById('admin-users-body');
+      const users = window.adminMetrics?.recentUsers || [];
+      if (!tbody) return;
+
+      tbody.innerHTML = users.map(u => `
+        <tr>
+          <td><strong>${u.name}</strong></td>
+          <td>${u.email}</td>
+          <td><span class="badge ${u.role === 'admin' ? 'badge-warning' : 'badge-completed'}">${u.role.toUpperCase()}</span></td>
+          <td><span class="badge badge-success">${u.status}</span></td>
+          <td style="color: var(--muted);">${u.joined}</td>
+          <td style="text-align: right;">
+            <button class="btn btn-outline btn-sm" onclick="window.showToast('Role updated for ${u.name}')">Toggle Role</button>
+          </td>
+        </tr>
+      `).join('');
+    });
+  </script>
+</body>
+</html>
