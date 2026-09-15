@@ -20,32 +20,52 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Mobile Hamburger Menu Drawer Toggle
-  const toggleBtn = document.getElementById('mobile-menu-btn');
-  const navMenu = document.querySelector('.nav-links');
+  // Mobile Hamburger Menu Drawer Toggle & Backdrop Overlay
+  const toggleBtn = document.getElementById('mobile-menu-btn') || document.getElementById('sidebar-toggle-btn');
+  const navMenu = document.querySelector('.sidebar') || document.querySelector('.nav-links');
 
   if (toggleBtn && navMenu) {
+    // Create Backdrop element if not already present
+    let backdrop = document.querySelector('.mobile-backdrop');
+    if (!backdrop) {
+      backdrop = document.createElement('div');
+      backdrop.className = 'mobile-backdrop';
+      document.body.appendChild(backdrop);
+    }
+
+    const updateIcon = (isOpen) => {
+      toggleBtn.innerHTML = `<i data-lucide="${isOpen ? 'x' : 'menu'}"></i>`;
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+    };
+
     const closeMenu = () => {
       navMenu.classList.remove('mobile-open');
+      backdrop.classList.remove('active');
       document.body.classList.remove('no-scroll');
-      const icon = toggleBtn.querySelector('i');
-      if (icon) {
-        icon.setAttribute('data-lucide', 'menu');
-        if (window.lucide) window.lucide.createIcons();
-      }
+      updateIcon(false);
+    };
+
+    const openMenu = () => {
+      navMenu.classList.add('mobile-open');
+      backdrop.classList.add('active');
+      document.body.classList.add('no-scroll');
+      updateIcon(true);
     };
 
     toggleBtn.addEventListener('click', (e) => {
       e.stopPropagation();
-      const isOpen = navMenu.classList.toggle('mobile-open');
-      document.body.classList.toggle('no-scroll', isOpen);
-
-      const icon = toggleBtn.querySelector('i');
-      if (icon) {
-        icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
-        if (window.lucide) window.lucide.createIcons();
+      const isOpen = navMenu.classList.contains('mobile-open');
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
       }
     });
+
+    // Close when tapping backdrop
+    backdrop.addEventListener('click', closeMenu);
 
     // Close on outside click
     document.addEventListener('click', (e) => {
@@ -59,23 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
       l.addEventListener('click', () => {
         closeMenu();
       });
-    });
-  }
-
-  // Dashboard & Admin Mobile Sidebar Toggle
-  const sidebarToggleBtn = document.getElementById('sidebar-toggle-btn');
-  const sidebar = document.querySelector('.sidebar');
-
-  if (sidebarToggleBtn && sidebar) {
-    sidebarToggleBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      sidebar.classList.toggle('mobile-open');
-    });
-
-    document.addEventListener('click', (e) => {
-      if (sidebar.classList.contains('mobile-open') && !sidebar.contains(e.target) && !sidebarToggleBtn.contains(e.target)) {
-        sidebar.classList.remove('mobile-open');
-      }
     });
   }
 });

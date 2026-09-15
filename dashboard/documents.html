@@ -19,20 +19,11 @@
   <header class="site-header">
     <div class="container navbar">
       <a href="../index.html" class="brand-logo"><i data-lucide="scale" style="color: var(--gold);"></i>Lex<span>Draft</span></a>
-      <ul class="nav-links">
-        <li><a href="../index.html" class="nav-link">Home 1</a></li>
-        <li><a href="../home2.html" class="nav-link">Home 2</a></li>
-        <li><a href="../about.html" class="nav-link">About</a></li>
-        <li><a href="../services.html" class="nav-link">Services</a></li>
-        <li><a href="../blogs.html" class="nav-link">Blogs</a></li>
-        <li><a href="../contact.html" class="nav-link">Contact</a></li>
-      </ul>
       <div class="nav-actions">
-        <span style="font-size: 13px; font-weight: 600; color: var(--navy); display: flex; align-items: center; gap: 6px;">
+        <a href="profile.html" class="header-user-badge" style="font-size: 13px; font-weight: 600; color: var(--navy); display: flex; align-items: center; gap: 6px; text-decoration: none; padding: 6px 12px; background: rgba(11,25,44,0.05); border-radius: var(--radius-sm);">
           <i data-lucide="user-check" style="width: 16px; height: 16px; color: var(--gold);"></i>
           Eleanor Vance
-        </span>
-        <a href="../login.html" class="btn btn-ghost btn-sm" style="color: var(--danger);">Sign Out</a>
+        </a>
         <button id="mobile-menu-btn" class="btn btn-ghost mobile-toggle-btn" aria-label="Toggle Navigation">
           <i data-lucide="menu"></i>
         </button>
@@ -42,13 +33,14 @@
 
   <div class="layout-with-sidebar">
     <aside class="sidebar">
-      <div style="padding: 12px 16px; font-size: 11px; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em;">Client Navigation</div>
+      <div class="sidebar-label" style="padding: 12px 16px; font-size: 11px; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em;">Client Navigation</div>
       <a href="index.html" class="sidebar-link"><i data-lucide="layout-dashboard"></i> Dashboard</a>
       <a href="documents.html" class="sidebar-link active"><i data-lucide="files"></i> My Documents</a>
-      <a href="../wizard/will.html" class="sidebar-link"><i data-lucide="file-plus"></i> Create Will</a>
-      <a href="../wizard/poa.html" class="sidebar-link"><i data-lucide="briefcase"></i> Create POA</a>
-      <a href="../wizard/affidavit.html" class="sidebar-link"><i data-lucide="file-badge"></i> Create Affidavit</a>
+      <a href="../wizard/will.html" class="sidebar-link"><i data-lucide="file-plus"></i> Create New Document</a>
+      <a href="security.html" class="sidebar-link"><i data-lucide="shield-check"></i> Security & Storage</a>
+      <a href="../services.html#faq" class="sidebar-link"><i data-lucide="help-circle"></i> Help & Legal Guide</a>
       <a href="profile.html" class="sidebar-link"><i data-lucide="user"></i> Account Profile</a>
+      <a href="../login.html" class="sidebar-link" style="color: #F87171 !important; margin-top: 12px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px;"><i data-lucide="log-out" style="stroke: #F87171;"></i> Sign Out</a>
     </aside>
 
     <main class="main-content space-y-6">

@@ -82,13 +82,30 @@ function renderWizardStep() {
     `;
   }
 
+  const docTypeLabel = currentDoc.type === 'poa' ? 'Power of Attorney' : (currentDoc.type === 'affidavit' ? 'Sworn Affidavit' : 'Last Will & Testament');
+
+  // Render Stepper UI with step continuation arrows (1 ➔ 2 ➔ 3 ➔ ...) and clickable steps
+  if (stepperContainer) {
+    stepperContainer.innerHTML = `
+      <div class="progress-steps">
+        ${[1, 2, 3, 4, 5, 6, 7, 8, 9].map((s, idx) => `
+          <div class="step-item ${s === currentStep ? 'active' : ''} ${s < currentStep ? 'completed' : ''}" onclick="jumpToStep(${s})" style="cursor: pointer;" title="Go to Step ${s}: ${getStepLabel(s, currentDoc.type)}">
+            <div class="step-number">${s < currentStep ? '✓' : s}</div>
+            <span class="step-label">${getStepLabel(s, currentDoc.type)}</span>
+          </div>
+          ${idx < 8 ? `<div class="step-arrow ${s <= currentStep ? 'completed' : ''}">➔</div>` : ''}
+        `).join('')}
+      </div>
+    `;
+  }
+
   // Render Form Step HTML
   container.innerHTML = `
     <div class="card space-y-6">
-      <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 16px; margin-bottom: 20px;">
+      <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 16px; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
         <div>
-          <span class="section-eyebrow">STEP ${currentStep} OF 9</span>
-          <h2 style="font-size: 22px;">${getStepTitle(currentStep)}</h2>
+          <span class="section-eyebrow">${docTypeLabel.toUpperCase()} WIZARD — STEP ${currentStep} OF 9</span>
+          <h2 style="font-size: 22px;">${getStepTitle(currentStep, currentDoc.type)}</h2>
         </div>
         <div style="display: flex; align-items: center; gap: 8px;">
           <span id="wiz-autosave-indicator" style="font-size: 12px; color: var(--success); font-weight: 600;">✓ Auto-Saved</span>
@@ -97,7 +114,7 @@ function renderWizardStep() {
       </div>
 
       <form id="wizard-form" class="space-y-4" onsubmit="return false;">
-        ${getStepFormHTML(currentStep, currentDoc.formData)}
+        ${getStepFormHTML(currentStep, currentDoc.formData, currentDoc.type)}
 
         <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border); padding-top: 20px; margin-top: 24px;">
           ${currentStep > 1 ? `
@@ -119,18 +136,54 @@ function renderWizardStep() {
   attachWizardEvents();
 }
 
-function getStepLabel(s) {
+function getStepLabel(s, docType) {
+  if (docType === 'poa') {
+    const labels = ['Principal', 'Agent', 'Financial', 'Medical', 'Successor', 'Directives', 'Review', 'Finalize', 'PDF'];
+    return labels[s - 1] || `Step ${s}`;
+  }
+  if (docType === 'affidavit') {
+    const labels = ['Affiant', 'Facts', 'Evidence', 'Perjury', 'Venue', 'Jurat', 'Review', 'Finalize', 'PDF'];
+    return labels[s - 1] || `Step ${s}`;
+  }
   const labels = ['Profile', 'Family', 'Assets', 'Beneficiaries', 'Executor', 'Directives', 'Review', 'Finalize', 'PDF'];
   return labels[s - 1] || `Step ${s}`;
 }
 
-function getStepTitle(s) {
+function getStepTitle(s, docType) {
+  if (docType === 'poa') {
+    const titles = [
+      'Principal Identification & Jurisdiction',
+      'Primary Attorney-in-Fact / Agent Nomination',
+      'Financial, Banking & Asset Powers Granted',
+      'Healthcare & Medical Advance Directives',
+      'Successor Agent & Co-Agent Designation',
+      'Effective Date, Durability & Revocation Clause',
+      'Comprehensive Power of Attorney Review',
+      'Execution, Attestation & Notary Public Block',
+      'Power of Attorney PDF Export'
+    ];
+    return titles[s - 1] || 'POA Step';
+  }
+  if (docType === 'affidavit') {
+    const titles = [
+      'Affiant Identity & Residence Verification',
+      'Statement of Facts Made Under Oath',
+      'Supporting Evidence & Factual Declarations',
+      'Penalty of Perjury Confirmation Clause',
+      'State Jurisdiction & County Venue Designation',
+      'Notary Public Jurat Signature Block',
+      'Comprehensive Sworn Affidavit Review',
+      'Execution & Notarization Block',
+      'Sworn Affidavit PDF Export'
+    ];
+    return titles[s - 1] || 'Affidavit Step';
+  }
   const titles = [
     'Personal Profile Identification',
     'Family Information & Dependents',
     'Asset Inventory & Allocations',
     'Primary & Contingent Beneficiaries',
-    'Executor & Agent Designation',
+    'Executor & Guardian Designation',
     'Special Directives & Funeral Wishes',
     'Comprehensive Review & Verification',
     'Execution & Attestation Declaration',
@@ -139,11 +192,11 @@ function getStepTitle(s) {
   return titles[s - 1] || 'Wizard Step';
 }
 
-function getStepFormHTML(s, data) {
+function getStepFormHTML(s, data, docType) {
   if (s === 1) {
     return `
       <div class="form-group">
-        <label class="form-label">Full Legal Name *</label>
+        <label class="form-label">${docType === 'poa' ? 'Principal Full Legal Name *' : (docType === 'affidavit' ? 'Affiant Full Legal Name *' : 'Testator Full Legal Name *')}</label>
         <input type="text" name="fullName" value="${data.personal?.fullName || ''}" class="input" required>
       </div>
       <div class="form-group">
@@ -164,6 +217,30 @@ function getStepFormHTML(s, data) {
       </div>
     `;
   } else if (s === 2) {
+    if (docType === 'poa') {
+      return `
+        <div class="form-group">
+          <label class="form-label">Primary Agent / Attorney-in-Fact Full Legal Name *</label>
+          <input type="text" name="spouseName" value="${data.family?.spouseName || ''}" class="input" placeholder="Full legal name of appointed agent" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Agent Relationship & Address</label>
+          <textarea name="childrenDetails" rows="3" class="textarea" placeholder="Agent relationship (e.g. Spouse, Adult Child) and residential address">${data.family?.childrenDetails || ''}</textarea>
+        </div>
+      `;
+    }
+    if (docType === 'affidavit') {
+      return `
+        <div class="form-group">
+          <label class="form-label">Statement of Fact Paragraph 1 *</label>
+          <textarea name="spouseName" rows="3" class="textarea" placeholder="State primary factual declaration under oath..." required>${data.family?.spouseName || ''}</textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Statement of Fact Paragraph 2</label>
+          <textarea name="childrenDetails" rows="3" class="textarea" placeholder="Additional supporting factual statements...">${data.family?.childrenDetails || ''}</textarea>
+        </div>
+      `;
+    }
     return `
       <div class="form-group">
         <label class="form-label">Spouse / Partner Name</label>
@@ -175,6 +252,30 @@ function getStepFormHTML(s, data) {
       </div>
     `;
   } else if (s === 3) {
+    if (docType === 'poa') {
+      return `
+        <div class="form-group">
+          <label class="form-label">Granted Financial & Banking Powers</label>
+          <textarea name="realEstate" rows="3" class="textarea" placeholder="Authority over bank accounts, real estate transactions, tax filing, and bills">${data.assets?.realEstate || ''}</textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Business & Investment Powers</label>
+          <textarea name="bankAccounts" rows="3" class="textarea" placeholder="Authority to operate business accounts and manage stock portfolios">${data.assets?.bankAccounts || ''}</textarea>
+        </div>
+      `;
+    }
+    if (docType === 'affidavit') {
+      return `
+        <div class="form-group">
+          <label class="form-label">Exhibits & Supporting Attached Documents</label>
+          <textarea name="realEstate" rows="3" class="textarea" placeholder="List any attached exhibits (e.g., Exhibit A: Residency Utility Bill)">${data.assets?.realEstate || ''}</textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Purpose of Affidavit Submission</label>
+          <textarea name="bankAccounts" rows="3" class="textarea" placeholder="e.g. Identity verification, Court proceeding, Financial claim">${data.assets?.bankAccounts || ''}</textarea>
+        </div>
+      `;
+    }
     return `
       <div class="form-group">
         <label class="form-label">Real Estate Properties</label>
@@ -186,6 +287,26 @@ function getStepFormHTML(s, data) {
       </div>
     `;
   } else if (s === 4) {
+    if (docType === 'poa') {
+      return `
+        <div class="form-group">
+          <label class="form-label">Healthcare & Medical Decisions Authorization</label>
+          <textarea name="primary" rows="3" class="textarea" placeholder="Grant authority for medical treatment decisions, hospital admission, and physician consultation">${data.beneficiaries?.primary || ''}</textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Living Will Directives / Organ Donation Provisions</label>
+          <textarea name="contingent" rows="3" class="textarea" placeholder="End-of-life care preferences and organ donation directives">${data.beneficiaries?.contingent || ''}</textarea>
+        </div>
+      `;
+    }
+    if (docType === 'affidavit') {
+      return `
+        <div class="form-group">
+          <label class="form-label">Penalty of Perjury Formal Affirmation Clause</label>
+          <textarea name="primary" rows="3" class="textarea" readonly style="background-color: var(--ivory);">I declare under penalty of perjury under the laws of this state that the foregoing statements are true and correct to the best of my knowledge, information, and belief.</textarea>
+        </div>
+      `;
+    }
     return `
       <div class="form-group">
         <label class="form-label">Primary Beneficiaries & Allocation (%) *</label>
@@ -197,9 +318,33 @@ function getStepFormHTML(s, data) {
       </div>
     `;
   } else if (s === 5) {
+    if (docType === 'poa') {
+      return `
+        <div class="form-group">
+          <label class="form-label">Successor Agent Name *</label>
+          <input type="text" name="primaryName" value="${data.executor?.primaryName || ''}" class="input" placeholder="Alternate agent if primary is unable to serve">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Co-Agent Names (if applicable)</label>
+          <input type="text" name="altName" value="${data.executor?.altName || ''}" class="input" placeholder="Co-agents authorized to act jointly">
+        </div>
+      `;
+    }
+    if (docType === 'affidavit') {
+      return `
+        <div class="form-group">
+          <label class="form-label">State of Execution *</label>
+          <input type="text" name="primaryName" value="${data.executor?.primaryName || 'Illinois'}" class="input">
+        </div>
+        <div class="form-group">
+          <label class="form-label">County Venue *</label>
+          <input type="text" name="altName" value="${data.executor?.altName || 'Cook County'}" class="input">
+        </div>
+      `;
+    }
     return `
       <div class="form-group">
-        <label class="form-label">Primary Executor / Agent Name *</label>
+        <label class="form-label">Primary Executor Name *</label>
         <input type="text" name="primaryName" value="${data.executor?.primaryName || ''}" class="input">
       </div>
       <div class="form-group">
@@ -208,6 +353,22 @@ function getStepFormHTML(s, data) {
       </div>
     `;
   } else if (s === 6) {
+    if (docType === 'poa') {
+      return `
+        <div class="form-group">
+          <label class="form-label">Effective Date & Durability Clause</label>
+          <textarea name="funeralWishes" rows="4" class="textarea" placeholder="e.g., 'This Power of Attorney shall take effect immediately and remain in effect upon my subsequent disability or incapacity.'">${data.directives?.funeralWishes || ''}</textarea>
+        </div>
+      `;
+    }
+    if (docType === 'affidavit') {
+      return `
+        <div class="form-group">
+          <label class="form-label">Notary Public Oath & Jurat Text</label>
+          <textarea name="funeralWishes" rows="4" class="textarea" readonly style="background-color: var(--ivory);">Subscribed and sworn to before me on this day by the affiant, who proved to me on the basis of satisfactory evidence to be the person who appeared before me.</textarea>
+        </div>
+      `;
+    }
     return `
       <div class="form-group">
         <label class="form-label">Special Directives & Funeral Wishes</label>
@@ -217,11 +378,10 @@ function getStepFormHTML(s, data) {
   } else if (s === 7) {
     return `
       <div style="background-color: var(--ivory); padding: 20px; border-radius: 8px; font-size: 14px; line-height: 1.8;">
-        <h4 style="color: var(--gold); margin-bottom: 10px;">DATA REVIEW CHECKLIST</h4>
-        <p><strong>Testator:</strong> ${data.personal?.fullName || 'N/A'} (<a href="javascript:void(0)" onclick="jumpToStep(1)">Edit</a>)</p>
+        <h4 style="color: var(--gold); margin-bottom: 10px;">${docTypeLabel.toUpperCase()} REVIEW CHECKLIST</h4>
+        <p><strong>${docType === 'poa' ? 'Principal' : (docType === 'affidavit' ? 'Affiant' : 'Testator')}:</strong> ${data.personal?.fullName || 'N/A'} (<a href="javascript:void(0)" onclick="jumpToStep(1)">Edit</a>)</p>
         <p><strong>Address:</strong> ${data.personal?.address || 'N/A'} (<a href="javascript:void(0)" onclick="jumpToStep(1)">Edit</a>)</p>
-        <p><strong>Executor:</strong> ${data.executor?.primaryName || 'N/A'} (<a href="javascript:void(0)" onclick="jumpToStep(5)">Edit</a>)</p>
-        <p><strong>Beneficiaries:</strong> ${data.beneficiaries?.primary || 'N/A'} (<a href="javascript:void(0)" onclick="jumpToStep(4)">Edit</a>)</p>
+        <p><strong>${docType === 'poa' ? 'Appointed Agent' : (docType === 'affidavit' ? 'Venue' : 'Executor')}:</strong> ${data.executor?.primaryName || data.family?.spouseName || 'N/A'} (<a href="javascript:void(0)" onclick="jumpToStep(2)">Edit</a>)</p>
       </div>
     `;
   } else if (s === 8) {
@@ -231,19 +391,19 @@ function getStepFormHTML(s, data) {
         <input type="text" name="witness1" value="${data.witnesses?.witness1 || ''}" class="input">
       </div>
       <div class="form-group">
-        <label class="form-label">Witness 2 Full Name</label>
+        <label class="form-label">Witness 2 / Notary Public Name</label>
         <input type="text" name="witness2" value="${data.witnesses?.witness2 || ''}" class="input">
       </div>
-      <div style="display: flex; items-center; gap: 8px; margin-top: 16px;">
+      <div style="display: flex; align-items: center; gap: 8px; margin-top: 16px;">
         <input type="checkbox" id="chk-confirm" ${data.finalized ? 'checked' : ''}>
-        <label for="chk-confirm" style="font-size: 13px; color: var(--navy);">I confirm the information above is accurate and complete.</label>
+        <label for="chk-confirm" style="font-size: 13px; color: var(--navy);">I confirm the information provided above is accurate and complete.</label>
       </div>
     `;
   } else {
     return `
       <div style="text-align: center; padding: 30px 0;">
-        <h3 style="color: var(--success); font-size: 24px; margin-bottom: 12px;">✓ Legal Document Ready for Download</h3>
-        <p style="margin-bottom: 24px; color: var(--muted); font-size: 14px;">Your official legal document has been compiled and saved. Click below to download your ready-to-sign PDF.</p>
+        <h3 style="color: var(--success); font-size: 24px; margin-bottom: 12px;">✓ ${docTypeLabel} Ready for Download</h3>
+        <p style="margin-bottom: 24px; color: var(--muted); font-size: 14px;">Your official ${docTypeLabel} document has been compiled and saved. Click below to download your PDF.</p>
         <button type="button" id="btn-generate-pdf-main" class="btn btn-gold" style="padding: 12px 24px; font-size: 15px;">
           Download Official PDF
         </button>

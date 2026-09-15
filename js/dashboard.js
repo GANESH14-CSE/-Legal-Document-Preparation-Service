@@ -45,16 +45,18 @@ export function renderDashboardData() {
 
       return `
         <tr>
-          <td>
-            <strong>${doc.title || 'Untitled Document'}</strong>
-            <div style="font-size: 12px; color: var(--muted); text-transform: uppercase;">${doc.type}</div>
+          <td data-label="Document Title">
+            <div style="display: flex; flex-direction: column; align-items: flex-end; text-align: right;">
+              <strong style="color: var(--navy); line-height: 1.3;">${doc.title || 'Untitled Document'}</strong>
+              <span class="badge badge-outline" style="font-size: 10px; margin-top: 4px; text-transform: uppercase;">${doc.type}</span>
+            </div>
           </td>
-          <td>
+          <td data-label="Status">
             <span class="badge ${isComplete ? 'badge-completed' : 'badge-draft'}">
               ${isComplete ? 'COMPLETED' : 'IN DRAFT'}
             </span>
           </td>
-          <td>
+          <td data-label="Progress">
             <div style="display: flex; align-items: center; gap: 8px;">
               <div style="flex-grow: 1; height: 6px; background-color: var(--border); border-radius: 3px; overflow: hidden; max-width: 100px;">
                 <div style="width: ${pct}%; height: 100%; background-color: var(--gold);"></div>
@@ -62,17 +64,19 @@ export function renderDashboardData() {
               <span style="font-size: 12px; font-weight: 700;">${pct}%</span>
             </div>
           </td>
-          <td style="color: var(--muted); font-size: 13px;">${doc.updatedAt ? new Date(doc.updatedAt).toLocaleDateString() : 'Recent'}</td>
-          <td style="text-align: right;">
-            <a href="../wizard/${doc.type}.html?doc=${doc.id}&step=${doc.currentStep || 1}" class="btn btn-outline btn-sm">
-              <i data-lucide="edit-3" style="width: 14px; height: 14px;"></i> Continue
-            </a>
-            <button data-download-id="${doc.id}" class="btn btn-gold btn-sm" style="margin-left: 4px;">
-              <i data-lucide="download" style="width: 14px; height: 14px;"></i> PDF
-            </button>
-            <button data-delete-id="${doc.id}" class="btn btn-ghost btn-sm" style="color: var(--danger); margin-left: 4px;">
-              <i data-lucide="trash-2" style="width: 14px; height: 14px;"></i>
-            </button>
+          <td data-label="Last Modified" style="color: var(--muted); font-size: 13px;">${doc.updatedAt ? new Date(doc.updatedAt).toLocaleDateString() : 'Recent'}</td>
+          <td data-label="Actions" style="text-align: right;">
+            <div class="actions-group">
+              <a href="../wizard/${doc.type}.html?doc=${doc.id}&step=${doc.currentStep || 1}" class="btn btn-outline btn-sm">
+                <i data-lucide="edit-3" style="width: 13px; height: 13px;"></i> Continue
+              </a>
+              <button data-download-id="${doc.id}" class="btn btn-gold btn-sm">
+                <i data-lucide="download" style="width: 13px; height: 13px;"></i> PDF
+              </button>
+              <button data-delete-id="${doc.id}" class="btn btn-ghost btn-sm" style="color: var(--danger); padding: 6px 8px;">
+                <i data-lucide="trash-2" style="width: 14px; height: 14px;"></i>
+              </button>
+            </div>
           </td>
         </tr>
       `;
