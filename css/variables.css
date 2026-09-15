@@ -1,0 +1,42 @@
+/* LexDraft — Color & Spacing Tokens (variables.css) */
+
+:root {
+  --navy: #0B1F3A;
+  --navy-light: #163A63;
+  --navy-dark: #061122;
+  --gold: #C8A45D;
+  --gold-light: #E8D7B2;
+  --gold-hover: #b8934b;
+  --ivory: #F8F7F3;
+  --white: #FFFFFF;
+  --text: #172033;
+  --muted: #667085;
+  --border: #E5E7EB;
+
+  --success: #1B7F4C;
+  --success-light: #E6F4ED;
+  --warning: #B7791F;
+  --warning-light: #FEF3C7;
+  --danger: #B42318;
+  --danger-light: #FEE4E2;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --shadow-sm: 0 1px 2px rgba(11,31,58,0.06);
+  --shadow-md: 0 8px 24px rgba(11,31,58,0.08);
+  --shadow-lg: 0 20px 48px rgba(11,31,58,0.12);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  --container-max: 1200px;
+}

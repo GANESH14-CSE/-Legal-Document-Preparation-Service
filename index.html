@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LexDraft — Online Will & Legal Document Preparation Platform</title>
+  <meta name="description" content="Prepare legally binding Last Will & Testament, Power of Attorney, and Sworn Affidavits online with step-by-step guidance, auto-saved drafts, and instant PDF generation.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Header Navbar -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <i data-lucide="scale" style="color: var(--gold);"></i>
+        Lex<span>Draft</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link active">Home 1</a></li>
+        <li><a href="home2.html" class="nav-link">Home 2</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li class="mobile-cta-item"><a href="wizard/will.html" class="btn btn-gold mobile-cta-btn">Get Started</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- RTL Direction Toggle -->
+        <button class="rtl-toggle-btn" title="Toggle Right-to-Left Layout">RTL</button>
+
+        <!-- Profile Dropdown Popover -->
+        <div class="profile-dropdown-wrapper">
+          <button class="profile-btn" aria-label="User Account Menu" title="Account Portals">
+            <i data-lucide="user"></i>
+          </button>
+          <div class="profile-dropdown-menu">
+            <div class="dropdown-header">
+              <h4>LexDraft Portals</h4>
+              <p>Client & Executive Access</p>
+            </div>
+            <ul class="dropdown-links">
+              <li><a href="login.html"><i data-lucide="log-in"></i> Account Portal Login</a></li>
+              <li><a href="login.html"><i data-lucide="user-plus"></i> Register Account</a></li>
+              <li><a href="dashboard/index.html"><i data-lucide="layout-dashboard"></i> Client Dashboard</a></li>
+              <li><a href="admin/index.html"><i data-lucide="shield"></i> Admin Panel</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="wizard/will.html" class="btn btn-gold header-get-started">Get Started</a>
+        <button id="mobile-menu-btn" class="btn btn-ghost mobile-toggle-btn" aria-label="Toggle Navigation">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="space-y-6">
+        <span class="section-eyebrow">LEGALTECH DOCUMENT PLATFORM</span>
+        <h1 class="hero-title">Create Important Legal Documents With Confidence</h1>
+        <p style="font-size: 18px; color: var(--muted); max-width: 540px; line-height: 1.6;">
+          Our platform guides you through the document preparation process step-by-step with clear prompts, auto-saved drafts, and instant PDF generation.
+        </p>
+
+        <div style="display: flex; gap: 16px; flex-wrap: wrap; padding-top: 8px;">
+          <a href="wizard/will.html" class="btn btn-gold btn-lg">
+            <i data-lucide="file-text"></i> Create a Document
+          </a>
+          <a href="services.html" class="btn btn-outline btn-lg">
+            <i data-lucide="grid"></i> Explore Services
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Product Visual & HTML/CSS Interface Preview -->
+      <div class="space-y-4">
+        <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-lg);">
+          <img src="images/hero_legal_tech.jpg" alt="LexDraft Legal Technology Workspace" style="width: 100%; height: 230px; object-fit: cover; display: block;">
+        </div>
+
+        <div class="product-mockup">
+          <div class="mockup-header">
+            <div class="mockup-dot-group">
+              <div class="mockup-dot"></div>
+              <div class="mockup-dot"></div>
+              <div class="mockup-dot"></div>
+            </div>
+            <span style="font-size: 11px; font-weight: 700; color: var(--gold); text-transform: uppercase;">Guided Preparation Engine</span>
+          </div>
+
+          <div class="mockup-body">
+            <div class="mockup-title">LAST WILL AND TESTAMENT</div>
+            <p style="font-style: italic; margin-bottom: 12px; font-size: 12px; color: var(--navy);">
+              "I, Eleanor Vance, residing at 742 Evergreen Terrace, declare this instrument to be my Last Will..."
+            </p>
+            <div style="padding-top: 8px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 11px;">
+              <span style="color: var(--muted);">Executor: Arthur Vance</span>
+              <span class="badge badge-completed">✓ Step 4 of 5 Complete</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Do — 3 Core Service Cards -->
+  <section class="section">
+    <div class="container space-y-8">
+      <div class="text-center">
+        <span class="section-eyebrow">WHAT WE DO</span>
+        <h2 class="section-title">Essential Document Solutions</h2>
+        <p style="color: var(--muted); max-width: 600px; margin: 8px auto 0 auto;">
+          Select a document to begin guided step-by-step preparation with real-time draft saving.
+        </p>
+      </div>
+
+      <div class="grid grid-3">
+        <!-- Will Card -->
+        <div class="card card-hover space-y-4" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="space-y-3">
+            <div style="width: 44px; height: 44px; border-radius: 8px; background: rgba(200,164,93,0.12); color: var(--gold-dark); display: flex; align-items: center; justify-content: center;">
+              <i data-lucide="scroll" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3>Last Will & Testament</h3>
+            <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">Designate asset distribution, appoint trusted personal executors, nominate minor guardians, and state funeral wishes.</p>
+          </div>
+          <a href="services.html#will" class="btn btn-outline w-full">Learn More →</a>
+        </div>
+
+        <!-- POA Card -->
+        <div class="card card-hover space-y-4" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="space-y-3">
+            <div style="width: 44px; height: 44px; border-radius: 8px; background: rgba(11,31,58,0.08); color: var(--navy); display: flex; align-items: center; justify-content: center;">
+              <i data-lucide="briefcase" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3>Power of Attorney</h3>
+            <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">Authorize a trusted attorney-in-fact to manage financial affairs, banking, property, and healthcare decisions.</p>
+          </div>
+          <a href="services.html#poa" class="btn btn-outline w-full">Learn More →</a>
+        </div>
+
+        <!-- Affidavit Card -->
+        <div class="card card-hover space-y-4" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="space-y-3">
+            <div style="width: 44px; height: 44px; border-radius: 8px; background: rgba(27,127,76,0.08); color: var(--success); display: flex; align-items: center; justify-content: center;">
+              <i data-lucide="file-badge" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3>Sworn Affidavit</h3>
+            <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">Create formal sworn written statements under oath for court filings, address verification, or financial facts.</p>
+          </div>
+          <a href="services.html#affidavit" class="btn btn-outline w-full">Learn More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us — 6 Key Benefits -->
+  <section class="section" style="background-color: var(--ivory); border-y: 1px solid var(--border);">
+    <div class="container space-y-8">
+      <div class="text-center">
+        <span class="section-eyebrow">WHY CHOOSE US</span>
+        <h2 class="section-title">Designed for Simplicity & Control</h2>
+        <p style="color: var(--muted); max-width: 600px; margin: 8px auto 0 auto;">
+          Experience a structured digital workflow built to make legal document preparation straightforward.
+        </p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card space-y-3">
+          <i data-lucide="list-checks" style="color: var(--gold); width: 28px; height: 28px;"></i>
+          <h4>Guided Step-by-Step Process</h4>
+          <p style="font-size: 13px; color: var(--muted); line-height: 1.6;">Clear prompts walk you through every required document field without overwhelming legal jargon.</p>
+        </div>
+
+        <div class="card space-y-3">
+          <i data-lucide="save" style="color: var(--gold); width: 28px; height: 28px;"></i>
+          <h4>Save & Resume Drafts</h4>
+          <p style="font-size: 13px; color: var(--muted); line-height: 1.6;">Form entries auto-save in real time so you can safely pause and resume whenever you're ready.</p>
+        </div>
+
+        <div class="card space-y-3">
+          <i data-lucide="check-square" style="color: var(--gold); width: 28px; height: 28px;"></i>
+          <h4>Review Before Finalizing</h4>
+          <p style="font-size: 13px; color: var(--muted); line-height: 1.6;">Verify all entered information and summary checklists prior to compiling your final document.</p>
+        </div>
+
+        <div class="card space-y-3">
+          <i data-lucide="folder-clock" style="color: var(--gold); width: 28px; height: 28px;"></i>
+          <h4>Organized Document History</h4>
+          <p style="font-size: 13px; color: var(--muted); line-height: 1.6;">Keep track of active document drafts and finalized PDFs cleanly in your client dashboard.</p>
+        </div>
+
+        <div class="card space-y-3">
+          <i data-lucide="download" style="color: var(--gold); width: 28px; height: 28px;"></i>
+          <h4>Easy PDF Access</h4>
+          <p style="font-size: 13px; color: var(--muted); line-height: 1.6;">Generate clean, printable PDF documents ready for signature, witnessing, and notarization.</p>
+        </div>
+
+        <div class="card space-y-3">
+          <i data-lucide="layout" style="color: var(--gold); width: 28px; height: 28px;"></i>
+          <h4>Simple User Experience</h4>
+          <p style="font-size: 13px; color: var(--muted); line-height: 1.6;">Intuitive mobile-responsive design that works seamlessly across phone, tablet, and desktop devices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works — 5-Step Process Timeline -->
+  <section class="section">
+    <div class="container space-y-8">
+      <div class="text-center">
+        <span class="section-eyebrow">SIMPLE 5-STEP WORKFLOW</span>
+        <h2 class="section-title">How Guided Preparation Works</h2>
+      </div>
+
+      <div class="timeline timeline-horizontal">
+        <div class="timeline-step">
+          <div class="timeline-step-num">01</div>
+          <h4>Choose a Document</h4>
+          <p style="font-size: 13px;">Select Will, POA, or Affidavit.</p>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-step-num">02</div>
+          <h4>Enter Your Details</h4>
+          <p style="font-size: 13px;">Fill in personal profile info.</p>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-step-num">03</div>
+          <h4>Answer Guided Questions</h4>
+          <p style="font-size: 13px;">Specify beneficiaries & executors.</p>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-step-num">04</div>
+          <h4>Review Your Information</h4>
+          <p style="font-size: 13px;">Verify summary checklist.</p>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-step-num">05</div>
+          <h4>Generate Your Document</h4>
+          <p style="font-size: 13px;">Download PDF for execution.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Preview Section -->
+  <section class="section" style="background-color: var(--ivory); border-top: 1px solid var(--border);">
+    <div class="container space-y-8">
+      <div class="text-center">
+        <span class="section-eyebrow">REALISTIC INTERFACE PREVIEW</span>
+        <h2 class="section-title">An Intuitive Workspace for Your Documents</h2>
+        <p style="color: var(--muted); max-width: 600px; margin: 8px auto 0 auto;">
+          Preview how our document wizard compiles your details in real time into clean, structured drafts.
+        </p>
+      </div>
+
+      <div class="card space-y-6" style="border: 1px solid var(--border); box-shadow: var(--shadow-lg); padding: 32px; background-color: var(--white);">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 16px; flex-wrap: wrap; gap: 12px;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 38px; height: 38px; border-radius: 50%; background-color: var(--ivory); display: flex; align-items: center; justify-content: center; color: var(--gold-dark);">
+              <i data-lucide="file-text" style="width: 20px; height: 20px;"></i>
+            </div>
+            <div>
+              <h3 style="margin: 0; font-size: 18px; color: var(--navy);">Document Wizard — Last Will & Testament</h3>
+              <span style="font-size: 12px; color: var(--muted);">Progress Auto-Saved • Draft ID: #WILL-2026-8902</span>
+            </div>
+          </div>
+          <span class="badge badge-completed">✓ 80% COMPLETE</span>
+        </div>
+
+        <div class="grid grid-2" style="gap: 24px;">
+          <div class="space-y-3">
+            <h4 style="font-size: 14px; color: var(--navy); text-transform: uppercase; letter-spacing: 0.04em;">Active Wizard Steps</h4>
+            <div style="padding: 10px 14px; background-color: var(--ivory); border-radius: var(--radius-sm); border-left: 3px solid var(--gold); font-size: 13px; font-weight: 600;">
+              1. Personal & Residence Information (Done)
+            </div>
+            <div style="padding: 10px 14px; background-color: var(--ivory); border-radius: var(--radius-sm); border-left: 3px solid var(--gold); font-size: 13px; font-weight: 600;">
+              2. Asset Allocation & Real Property (Done)
+            </div>
+            <div style="padding: 10px 14px; background-color: var(--ivory); border-radius: var(--radius-sm); border-left: 3px solid var(--gold); font-size: 13px; font-weight: 600;">
+              3. Beneficiaries & Primary Heirs (Done)
+            </div>
+            <div style="padding: 10px 14px; background-color: var(--navy); color: var(--white); border-radius: var(--radius-sm); font-size: 13px; font-weight: 600;">
+              4. Executor & Guardian Nominations (Active)
+            </div>
+            <div style="padding: 10px 14px; background-color: var(--ivory); border-radius: var(--radius-sm); color: var(--muted); font-size: 13px;">
+              5. Final Review & PDF Download (Pending)
+            </div>
+          </div>
+
+          <div style="background-color: #FAF8F5; border: 1px border var(--border); padding: 20px; border-radius: var(--radius-md);" class="space-y-3">
+            <h4 style="font-size: 14px; color: var(--navy);">Live Clause Preview</h4>
+            <p style="font-size: 13px; font-family: Georgia, serif; line-height: 1.6; color: var(--navy);">
+              "I hereby nominate, constitute, and appoint Arthur Vance as Personal Executor of this my Last Will and Testament. If he should fail or cease to serve, I appoint Elena Vance as Contingent Executor..."
+            </p>
+            <div style="display: flex; gap: 10px; padding-top: 8px;">
+              <a href="wizard/will.html" class="btn btn-gold btn-sm">Launch Wizard Demo →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Banner -->
+  <section class="section" style="background-color: var(--navy); color: var(--white); text-align: center;">
+    <div class="container space-y-4">
+      <h2 class="section-title" style="color: var(--white);">Ready to Prepare Your Legal Document?</h2>
+      <p style="color: #94A3B8; max-width: 500px; margin: 0 auto;">Organize your essential estate documents step-by-step today.</p>
+      <a href="wizard/will.html" class="btn btn-gold btn-lg">Create Your Document Now</a>
+    </div>
+  </section>
+
+  <!-- Standardized Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="color: var(--white);">Lex<span>Draft</span></a>
+          <p style="color: #94A3B8; font-size: 14px; margin-top: 12px; line-height: 1.6;">
+            LexDraft provides self-guided legal document preparation software tools. Simple, transparent, and accessible estate document generation.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Documents</h4>
+          <ul class="footer-links">
+            <li><a href="wizard/will.html">Last Will & Testament</a></li>
+            <li><a href="wizard/poa.html">Power of Attorney</a></li>
+            <li><a href="wizard/affidavit.html">Sworn Affidavit</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Legal Services & FAQ</a></li>
+            <li><a href="blogs.html">Knowledge Hub</a></li>
+            <li><a href="contact.html">Contact Support Desk</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal & Security</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="login.html">Client Sign In</a></li>
+            <li><a href="dashboard/index.html">Client Dashboard</a></li>
+            <li><a href="admin/index.html">Admin Panel</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer">
+        <strong>LEGAL DISCLAIMER:</strong> Legal requirements vary by jurisdiction. This software tool helps you prepare self-guided draft legal documents; consider consulting a licensed legal professional for specific legal advice. This platform does not provide formal legal representation or act as a law firm.
+        <div style="margin-top: 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+          <span>&copy; <span id="footer-year">2026</span> LexDraft Systems. All Rights Reserved.</span>
+          <div>
+            <a href="privacy.html" style="color: #64748B; margin-left: 16px;">Privacy Policy</a>
+            <a href="privacy.html" style="color: #64748B; margin-left: 16px;">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/navigation.js"></script>
+</body>
+</html>
