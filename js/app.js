@@ -762,7 +762,7 @@
     } else if (cleanHash === '#/admin') {
       appContent.appendChild(renderAdminDashboard());
     } else {
-      appContent.appendChild(renderHome());
+      window.location.href = '404.html';
     }
 
     if (window.lucide) window.lucide.createIcons();

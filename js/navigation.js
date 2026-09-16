@@ -1,6 +1,12 @@
 /* LexDraft — Navigation Controller (navigation.js) */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Redirect invalid subpaths appended after .html extension (e.g., /wizard/will.html/wqedwqdas)
+  if (window.location.pathname.includes('.html/')) {
+    window.location.href = '/404.html';
+    return;
+  }
+
   // Highlight Active Link based on pathname
   const currentPath = window.location.pathname;
   const navLinks = document.querySelectorAll('.nav-link, .sidebar-link');

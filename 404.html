@@ -10,26 +10,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
   <!-- Site Header Navbar -->
   <header class="site-header">
     <div class="container navbar">
-      <a href="index.html" class="brand-logo">
+      <a href="/index.html" class="brand-logo">
         <i data-lucide="scale" style="color: var(--gold);"></i>
         Lex<span>Draft</span>
       </a>
 
       <ul class="nav-links">
-        <li><a href="index.html" class="nav-link">Home 1</a></li>
-        <li><a href="home2.html" class="nav-link">Home 2</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="services.html" class="nav-link">Services</a></li>
-        <li><a href="blogs.html" class="nav-link">Blogs</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-        <li class="mobile-cta-item"><a href="wizard/will.html" class="btn btn-gold mobile-cta-btn">Get Started</a></li>
+        <li><a href="/index.html" class="nav-link">Home</a></li>
+        <li><a href="/home2.html" class="nav-link">Workflow</a></li>
+        <li><a href="/about.html" class="nav-link">About</a></li>
+        <li><a href="/services.html" class="nav-link">Services</a></li>
+        <li><a href="/blogs.html" class="nav-link">Blogs</a></li>
+        <li><a href="/contact.html" class="nav-link">Contact</a></li>
+        <li class="mobile-cta-item"><a href="/wizard/will.html" class="btn btn-gold mobile-cta-btn">Get Started</a></li>
       </ul>
 
       <div class="nav-actions">
@@ -47,15 +47,15 @@
               <p>Client & Executive Access</p>
             </div>
             <ul class="dropdown-links">
-              <li><a href="login.html"><i data-lucide="log-in"></i> Account Portal Login</a></li>
-              <li><a href="login.html"><i data-lucide="user-plus"></i> Register Account</a></li>
-              <li><a href="dashboard/index.html"><i data-lucide="layout-dashboard"></i> Client Dashboard</a></li>
-              <li><a href="admin/index.html"><i data-lucide="shield"></i> Admin Panel</a></li>
+              <li><a href="/login.html"><i data-lucide="log-in"></i> Account Portal Login</a></li>
+              <li><a href="/login.html"><i data-lucide="user-plus"></i> Register Account</a></li>
+              <li><a href="/dashboard/index.html"><i data-lucide="layout-dashboard"></i> Client Dashboard</a></li>
+              <li><a href="/admin/index.html"><i data-lucide="shield"></i> Admin Panel</a></li>
             </ul>
           </div>
         </div>
 
-        <a href="wizard/will.html" class="btn btn-gold header-get-started">Get Started</a>
+        <a href="/wizard/will.html" class="btn btn-gold header-get-started">Get Started</a>
         <button id="mobile-menu-btn" class="btn btn-ghost mobile-toggle-btn" aria-label="Toggle Navigation">
           <i data-lucide="menu"></i>
         </button>
@@ -80,8 +80,8 @@
 
       <!-- Search Input Box -->
       <div style="max-width: 500px; margin: 24px auto 0 auto; display: flex; gap: 8px;">
-        <input type="text" placeholder="Search for Last Will, POA, Knowledge Hub..." class="input" style="flex: 1;" onkeypress="if(event.key === 'Enter') window.location.href='blogs.html'">
-        <a href="blogs.html" class="btn btn-gold">Search</a>
+        <input type="text" placeholder="Search for Last Will, POA, Knowledge Hub..." class="input" style="flex: 1;" onkeypress="if(event.key === 'Enter') window.location.href='/blogs.html'">
+        <a href="/blogs.html" class="btn btn-gold">Search</a>
       </div>
     </div>
   </section>
@@ -98,14 +98,14 @@
       </div>
 
       <div class="grid grid-4">
-        <!-- Destination 1: Home 1 -->
+        <!-- Destination 1: Home Platform -->
         <div class="card card-hover space-y-3 text-center" style="border-top: 4px solid var(--navy);">
           <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(11,31,58,0.08); color: var(--navy); display: flex; align-items: center; justify-content: center; margin: 0 auto;">
             <i data-lucide="home" style="width: 24px; height: 24px;"></i>
           </div>
           <h4>Home Platform</h4>
           <p style="font-size: 13px; color: var(--muted);">Return to our main landing page and platform overview.</p>
-          <a href="index.html" class="btn btn-outline btn-sm w-full" style="margin-top: 8px;">Go to Home 1 →</a>
+          <a href="/index.html" class="btn btn-outline btn-sm w-full" style="margin-top: 8px;">Go to Home Page →</a>
         </div>
 
         <!-- Destination 2: Will Wizard -->
@@ -115,7 +115,7 @@
           </div>
           <h4>Last Will & Testament</h4>
           <p style="font-size: 13px; color: var(--muted);">Start our 9-step guided Will preparation wizard.</p>
-          <a href="wizard/will.html" class="btn btn-gold btn-sm w-full" style="margin-top: 8px;">Start Will Wizard →</a>
+          <a href="/wizard/will.html" class="btn btn-gold btn-sm w-full" style="margin-top: 8px;">Start Will Wizard →</a>
         </div>
 
         <!-- Destination 3: Client Dashboard -->
@@ -125,7 +125,7 @@
           </div>
           <h4>Client Workspace</h4>
           <p style="font-size: 13px; color: var(--muted);">Access your saved drafts, completed PDFs, and history.</p>
-          <a href="dashboard/index.html" class="btn btn-outline btn-sm w-full" style="margin-top: 8px;">Open Dashboard →</a>
+          <a href="/dashboard/index.html" class="btn btn-outline btn-sm w-full" style="margin-top: 8px;">Open Dashboard →</a>
         </div>
 
         <!-- Destination 4: Support Contact -->
@@ -135,7 +135,7 @@
           </div>
           <h4>Client Support</h4>
           <p style="font-size: 13px; color: var(--muted);">Have questions? Contact our customer assistance team.</p>
-          <a href="contact.html" class="btn btn-outline btn-sm w-full" style="margin-top: 8px;">Contact Support →</a>
+          <a href="/contact.html" class="btn btn-outline btn-sm w-full" style="margin-top: 8px;">Contact Support →</a>
         </div>
       </div>
     </div>
@@ -146,32 +146,32 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <a href="index.html" class="brand-logo" style="color: var(--white);">Lex<span>Draft</span></a>
+          <a href="/index.html" class="brand-logo" style="color: var(--white);">Lex<span>Draft</span></a>
           <p style="color: #94A3B8; font-size: 14px; margin-top: 12px;">LexDraft provides self-guided legal document preparation software tools. Simple, transparent, and accessible estate document generation.</p>
         </div>
         <div class="footer-col">
           <h4>Documents</h4>
           <ul class="footer-links">
-            <li><a href="wizard/will.html">Last Will & Testament</a></li>
-            <li><a href="wizard/poa.html">Power of Attorney</a></li>
-            <li><a href="wizard/affidavit.html">Sworn Affidavit</a></li>
+            <li><a href="/wizard/will.html">Last Will & Testament</a></li>
+            <li><a href="/wizard/poa.html">Power of Attorney</a></li>
+            <li><a href="/wizard/affidavit.html">Sworn Affidavit</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
           <ul class="footer-links">
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Legal Services</a></li>
-            <li><a href="blogs.html">Knowledge Hub</a></li>
-            <li><a href="contact.html">Contact Support</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/services.html">Legal Services</a></li>
+            <li><a href="/blogs.html">Knowledge Hub</a></li>
+            <li><a href="/contact.html">Contact Support</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Legal & Security</h4>
           <ul class="footer-links">
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="login.html">Client Sign In</a></li>
-            <li><a href="admin/index.html">Admin Panel</a></li>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/login.html">Client Sign In</a></li>
+            <li><a href="/admin/index.html">Admin Panel</a></li>
           </ul>
         </div>
       </div>
@@ -181,15 +181,15 @@
         <div style="margin-top: 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
           <span>&copy; <span id="footer-year">2026</span> LexDraft Systems. All Rights Reserved.</span>
           <div>
-            <a href="privacy.html" style="color: #64748B; margin-left: 16px;">Privacy</a>
-            <a href="privacy.html" style="color: #64748B; margin-left: 16px;">Terms</a>
+            <a href="/privacy.html" style="color: #64748B; margin-left: 16px;">Privacy</a>
+            <a href="/privacy.html" style="color: #64748B; margin-left: 16px;">Terms</a>
           </div>
         </div>
       </div>
     </div>
   </footer>
 
-  <script type="module" src="js/main.js"></script>
-  <script type="module" src="js/navigation.js"></script>
+  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="/js/navigation.js"></script>
 </body>
 </html>
