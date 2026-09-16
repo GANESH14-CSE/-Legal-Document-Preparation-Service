@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Workflow Simulator & Savings Calculator — LexDraft</title>
+  <title>Home 2 — LexDraft Legal Workspace</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +24,7 @@
       </a>
 
       <ul class="nav-links">
-        <li><a href="index.html" class="nav-link">Home 1</a></li>
+        <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="home2.html" class="nav-link active">Home 2</a></li>
         <li><a href="about.html" class="nav-link">About</a></li>
         <li><a href="services.html" class="nav-link">Services</a></li>
@@ -51,7 +51,6 @@
               <li><a href="login.html"><i data-lucide="log-in"></i> Account Portal Login</a></li>
               <li><a href="login.html"><i data-lucide="user-plus"></i> Register Account</a></li>
               <li><a href="dashboard/index.html"><i data-lucide="layout-dashboard"></i> Client Dashboard</a></li>
-              <li><a href="admin/index.html"><i data-lucide="shield"></i> Admin Panel</a></li>
             </ul>
           </div>
         </div>
@@ -64,251 +63,585 @@
     </div>
   </header>
 
-  <!-- Hero Banner -->
-  <section class="hero-section text-center">
-    <div class="container space-y-4">
-      <span class="section-eyebrow">PRODUCT EXPERIENCE & WORKFLOW</span>
-      <h1 class="hero-title">From Guided Questions to a Ready-to-Review Document</h1>
-      <p style="color: var(--muted); max-width: 680px; margin: 0 auto; line-height: 1.6;">
-        Experience the step-by-step digital process that transforms your plain-language answers into structured, organized legal document drafts.
-      </p>
-      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; padding-top: 8px;">
-        <a href="wizard/will.html" class="btn btn-gold btn-lg">Start Creating Your Document</a>
-        <a href="#interactive-workflow" class="btn btn-outline btn-lg">Explore Workflow</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive Workflow Section -->
-  <section class="section" id="interactive-workflow">
-    <div class="container space-y-8">
-      <div class="text-center">
-        <span class="section-eyebrow">STEP-BY-STEP PROCESS</span>
-        <h2 class="section-title">The Complete Document Creation Journey</h2>
-        <p style="color: var(--muted); max-width: 600px; margin: 8px auto 0 auto;">
-          Follow our 9-step guided workflow engineered for clarity, accuracy, and ease of use.
+  <!-- 01 HERO SECTION -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="space-y-6">
+        <span class="section-eyebrow">DIGITAL WORKSPACE ENGINE</span>
+        <h1 class="hero-title">A Simpler Way to Prepare Important Documents</h1>
+        <p style="font-size: 18px; color: var(--muted); max-width: 560px; line-height: 1.6;">
+          From guided questions to document generation, LexDraft brings the entire preparation experience into one simple digital workspace.
         </p>
+
+        <div style="display: flex; gap: 16px; flex-wrap: wrap; padding-top: 8px;">
+          <a href="wizard/will.html" class="btn btn-gold btn-lg">
+            <i data-lucide="play-circle"></i> Start Preparing
+          </a>
+          <a href="services.html" class="btn btn-outline btn-lg">
+            <i data-lucide="grid"></i> Explore Documents
+          </a>
+        </div>
       </div>
 
-      <div class="grid grid-3" style="gap: 20px;">
-        <!-- Step 1 -->
-        <div class="card space-y-3" style="border-top: 4px solid var(--gold);">
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-            <span style="font-size: 12px; font-weight: 800; color: var(--gold-dark); text-transform: uppercase;">Step 01</span>
-            <i data-lucide="file-text" style="color: var(--gold); width: 20px; height: 20px;"></i>
+      <!-- Right Realistic LexDraft Dashboard/Wizard Preview -->
+      <div class="space-y-4">
+        <div class="product-mockup" style="border: 1px solid var(--border); box-shadow: var(--shadow-lg);">
+          <div class="mockup-header" style="background-color: var(--navy); color: var(--white); padding: 12px 16px;">
+            <div class="mockup-dot-group">
+              <div class="mockup-dot" style="background-color: #EF4444;"></div>
+              <div class="mockup-dot" style="background-color: #F59E0B;"></div>
+              <div class="mockup-dot" style="background-color: #10B981;"></div>
+            </div>
+            <span style="font-size: 11px; font-weight: 700; color: var(--gold); text-transform: uppercase;">LexDraft Digital Workspace v1.0</span>
           </div>
-          <h4>Choose Document</h4>
-          <p style="font-size: 13px; color: var(--muted); line-height: 1.5;">Select between a Last Will & Testament, Power of Attorney, or Sworn Affidavit.</p>
-        </div>
 
-        <!-- Step 2 -->
-        <div class="card space-y-3" style="border-top: 4px solid var(--navy);">
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-            <span style="font-size: 12px; font-weight: 800; color: var(--navy); text-transform: uppercase;">Step 02</span>
-            <i data-lucide="user" style="color: var(--navy); width: 20px; height: 20px;"></i>
-          </div>
-          <h4>Personal Details</h4>
-          <p style="font-size: 13px; color: var(--muted); line-height: 1.5;">Enter full legal name, permanent residence address, and state jurisdiction.</p>
-        </div>
+          <div class="mockup-body" style="padding: 20px; background-color: var(--white);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <strong style="color: var(--navy); font-size: 14px;">LAST WILL & TESTAMENT WIZARD</strong>
+              <span class="badge badge-completed">Step 3 of 5</span>
+            </div>
 
-        <!-- Step 3 -->
-        <div class="card space-y-3" style="border-top: 4px solid var(--success);">
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-            <span style="font-size: 12px; font-weight: 800; color: var(--success); text-transform: uppercase;">Step 03</span>
-            <i data-lucide="users" style="color: var(--success); width: 20px; height: 20px;"></i>
-          </div>
-          <h4>Family & Beneficiaries</h4>
-          <p style="font-size: 13px; color: var(--muted); line-height: 1.5;">List primary and contingent beneficiaries receiving asset shares.</p>
-        </div>
+            <div style="background-color: var(--ivory); padding: 12px 16px; border-radius: var(--radius-sm); border: 1px solid var(--border); margin-bottom: 12px;" class="space-y-2">
+              <div style="font-size: 11px; color: var(--muted); font-weight: 700; text-transform: uppercase;">Active Section</div>
+              <div style="font-size: 13px; font-weight: 600; color: var(--navy);">Primary Beneficiary Allocation (Arthur Vance — 100%)</div>
+            </div>
 
-        <!-- Step 4 -->
-        <div class="card space-y-3" style="border-top: 4px solid var(--gold);">
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-            <span style="font-size: 12px; font-weight: 800; color: var(--gold-dark); text-transform: uppercase;">Step 04</span>
-            <i data-lucide="building" style="color: var(--gold); width: 20px; height: 20px;"></i>
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--muted); border-top: 1px solid var(--border); padding-top: 10px;">
+              <span>Auto-saved 1 minute ago</span>
+              <span style="color: var(--success); font-weight: 700;">✓ Ready for Review</span>
+            </div>
           </div>
-          <h4>Assets & Property</h4>
-          <p style="font-size: 13px; color: var(--muted); line-height: 1.5;">Specify real estate, bank accounts, investments, and personal property.</p>
-        </div>
-
-        <!-- Step 5 -->
-        <div class="card space-y-3" style="border-top: 4px solid var(--navy);">
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-            <span style="font-size: 12px; font-weight: 800; color: var(--navy); text-transform: uppercase;">Step 05</span>
-            <i data-lucide="shield" style="color: var(--navy); width: 20px; height: 20px;"></i>
-          </div>
-          <h4>Executor / Attorney Details</h4>
-          <p style="font-size: 13px; color: var(--muted); line-height: 1.5;">Appoint personal executors, guardians for minors, or agents-in-fact.</p>
-        </div>
-
-        <!-- Step 6 -->
-        <div class="card space-y-3" style="border-top: 4px solid var(--success);">
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-            <span style="font-size: 12px; font-weight: 800; color: var(--success); text-transform: uppercase;">Step 06</span>
-            <i data-lucide="file-plus" style="color: var(--success); width: 20px; height: 20px;"></i>
-          </div>
-          <h4>Special Instructions</h4>
-          <p style="font-size: 13px; color: var(--muted); line-height: 1.5;">Add specific bequest instructions, debt provisions, or funeral requests.</p>
-        </div>
-
-        <!-- Step 7 -->
-        <div class="card space-y-3" style="border-top: 4px solid var(--gold);">
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-            <span style="font-size: 12px; font-weight: 800; color: var(--gold-dark); text-transform: uppercase;">Step 07</span>
-            <i data-lucide="check-square" style="color: var(--gold); width: 20px; height: 20px;"></i>
-          </div>
-          <h4>Review Information</h4>
-          <p style="font-size: 13px; color: var(--muted); line-height: 1.5;">Verify all entered details on a comprehensive summary checklist before compiling.</p>
-        </div>
-
-        <!-- Step 8 -->
-        <div class="card space-y-3" style="border-top: 4px solid var(--navy);">
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-            <span style="font-size: 12px; font-weight: 800; color: var(--navy); text-transform: uppercase;">Step 08</span>
-            <i data-lucide="lock" style="color: var(--navy); width: 20px; height: 20px;"></i>
-          </div>
-          <h4>Finalize Draft</h4>
-          <p style="font-size: 13px; color: var(--muted); line-height: 1.5;">Lock in your entries and auto-save the document state to your client dashboard.</p>
-        </div>
-
-        <!-- Step 9 -->
-        <div class="card space-y-3" style="border-top: 4px solid var(--success);">
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-            <span style="font-size: 12px; font-weight: 800; color: var(--success); text-transform: uppercase;">Step 09</span>
-            <i data-lucide="download" style="color: var(--success); width: 20px; height: 20px;"></i>
-          </div>
-          <h4>PDF Generation</h4>
-          <p style="font-size: 13px; color: var(--muted); line-height: 1.5;">Download a clean, printable PDF ready for signature, witnessing, and notarization.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Document Creation Experience & Form UI Mockup -->
+  <!-- 02 EVERYTHING IN ONE PLACE -->
   <section class="section" style="background-color: var(--ivory); border-y: 1px solid var(--border);">
     <div class="container space-y-8">
       <div class="text-center">
-        <span class="section-eyebrow">GUIDED FORM UI</span>
-        <h2 class="section-title">The Document Creation Experience</h2>
+        <span class="section-eyebrow">EVERYTHING YOU NEED IN ONE PLACE</span>
+        <h2 class="section-title">Everything in One Place</h2>
         <p style="color: var(--muted); max-width: 600px; margin: 8px auto 0 auto;">
-          Our guided form translates complex legal questions into straightforward step-by-step inputs.
+          Four core capabilities designed to make legal document preparation effortless.
         </p>
       </div>
 
-      <div class="card space-y-6" style="background-color: var(--white); border: 1px solid var(--border); box-shadow: var(--shadow-md);">
-        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 14px; flex-wrap: wrap; gap: 12px;">
-          <div>
-            <h3 style="margin: 0; font-size: 18px; color: var(--navy);">Guided Form Interface — Step 3: Beneficiary Allocation</h3>
-            <span style="font-size: 12px; color: var(--muted);">Field Validation Active • Auto-Saving Progress</span>
+      <div class="grid grid-2" style="max-width: 860px; margin: 0 auto; gap: 24px;">
+        <!-- Card 1: Guided Preparation -->
+        <div class="card space-y-3" style="background-color: var(--white); border-top: 4px solid var(--navy);">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 44px; height: 44px; border-radius: 8px; background: rgba(11,31,58,0.08); color: var(--navy); display: flex; align-items: center; justify-content: center;">
+              <i data-lucide="edit-3" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3 style="font-size: 18px; margin: 0;">📝 Guided Preparation</h3>
           </div>
-          <span class="badge badge-draft">DRAFT IN PROGRESS</span>
+          <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">
+            Answer simple, structured questions instead of dealing with complicated blank documents.
+          </p>
         </div>
 
-        <div class="grid grid-2" style="gap: 24px;">
-          <div class="space-y-4">
-            <div class="form-group">
-              <label class="form-label">Primary Beneficiary Full Legal Name *</label>
-              <input type="text" value="Eleanor Vance" class="input" readonly style="background-color: #F8FAFC;">
+        <!-- Card 2: Save & Resume -->
+        <div class="card space-y-3" style="background-color: var(--white); border-top: 4px solid var(--gold);">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 44px; height: 44px; border-radius: 8px; background: rgba(200,164,93,0.12); color: var(--gold-dark); display: flex; align-items: center; justify-content: center;">
+              <i data-lucide="save" style="width: 24px; height: 24px;"></i>
             </div>
-
-            <div class="form-group">
-              <label class="form-label">Relationship to Testator *</label>
-              <input type="text" value="Spouse" class="input" readonly style="background-color: #F8FAFC;">
-            </div>
-
-            <div class="form-group">
-              <label class="form-label">Percentage Allocation Share (%) *</label>
-              <input type="text" value="100%" class="input" readonly style="background-color: #F8FAFC;">
-            </div>
+            <h3 style="font-size: 18px; margin: 0;">💾 Save & Resume</h3>
           </div>
+          <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">
+            Save your progress in real-time and safely continue whenever you are ready.
+          </p>
+        </div>
 
-          <div style="background-color: var(--navy); color: var(--white); padding: 20px; border-radius: var(--radius-md);" class="space-y-3">
-            <h4 style="color: var(--gold); font-size: 15px;">Real-Time Data Compilation</h4>
-            <p style="font-size: 13px; color: #94A3B8; line-height: 1.6;">
-              As you enter beneficiary information, our compiler structures the appropriate residuary estate clause according to statutory guidelines.
-            </p>
-            <div style="background: rgba(255,255,255,0.08); padding: 12px; border-radius: var(--radius-sm); font-family: monospace; font-size: 11px; color: var(--gold-light); word-break: break-word;">
-              CLAUSE PARSED: "I give, devise, and bequeath 100% of my residuary estate to my spouse, Eleanor Vance..."
+        <!-- Card 3: Review Before Generating -->
+        <div class="card space-y-3" style="background-color: var(--white); border-top: 4px solid var(--success);">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 44px; height: 44px; border-radius: 8px; background: rgba(27,127,76,0.08); color: var(--success); display: flex; align-items: center; justify-content: center;">
+              <i data-lucide="check-square" style="width: 24px; height: 24px;"></i>
             </div>
+            <h3 style="font-size: 18px; margin: 0;">👁️ Review Before Generating</h3>
           </div>
+          <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">
+            Review all the information you have entered on a summary checklist before creating your document.
+          </p>
+        </div>
+
+        <!-- Card 4: PDF Generation -->
+        <div class="card space-y-3" style="background-color: var(--white); border-top: 4px solid #6366F1;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 44px; height: 44px; border-radius: 8px; background: rgba(99,102,241,0.08); color: #6366F1; display: flex; align-items: center; justify-content: center;">
+              <i data-lucide="file-text" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3 style="font-size: 18px; margin: 0;">📄 PDF Generation</h3>
+          </div>
+          <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">
+            Generate and download your completed, professionally formatted legal PDF document.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Save & Resume + Document History Dashboard Preview -->
+  <!-- 03 DOCUMENT CENTER -->
   <section class="section">
     <div class="container space-y-8">
       <div class="text-center">
-        <span class="section-eyebrow">DASHBOARD & MANAGEMENT</span>
-        <h2 class="section-title">Save, Resume & Manage Your Document History</h2>
+        <span class="section-eyebrow">DOCUMENT CENTER</span>
+        <h2 class="section-title">Prepare the Document You Need</h2>
         <p style="color: var(--muted); max-width: 600px; margin: 8px auto 0 auto;">
-          Never lose your progress. All document drafts remain saved locally in your browser workspace.
+          Select from our three core legal document preparation tools.
         </p>
       </div>
 
-      <div class="card space-y-6">
-        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 14px; flex-wrap: wrap; gap: 12px;">
-          <h3 style="margin: 0; font-size: 18px; color: var(--navy);">Client Dashboard — Document History</h3>
-          <a href="wizard/will.html" class="btn btn-gold btn-sm">+ Create New Document</a>
+      <div class="grid grid-3">
+        <!-- Will Card -->
+        <div class="card card-hover space-y-4" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="space-y-4">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div style="width: 48px; height: 48px; border-radius: 10px; background: rgba(200,164,93,0.12); color: var(--gold-dark); display: flex; align-items: center; justify-content: center;">
+                <i data-lucide="scroll" style="width: 26px; height: 26px;"></i>
+              </div>
+              <h3 style="font-size: 20px; margin: 0;">Last Will & Testament</h3>
+            </div>
+            <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">
+              Organize your personal details, beneficiaries, executor information, guardianship preferences, assets and other relevant information.
+            </p>
+            <div style="background-color: var(--ivory); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border);" class="space-y-1">
+              <span style="font-size: 11px; font-weight: 700; color: var(--navy); text-transform: uppercase;">Key Included Fields:</span>
+              <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px;">
+                <span class="badge badge-outline" style="font-size: 11px;">Personal Details</span>
+                <span class="badge badge-outline" style="font-size: 11px;">Asset Allocation</span>
+                <span class="badge badge-outline" style="font-size: 11px;">Beneficiary Shares</span>
+                <span class="badge badge-outline" style="font-size: 11px;">Executor Nomination</span>
+                <span class="badge badge-outline" style="font-size: 11px;">Guardian Designation</span>
+              </div>
+            </div>
+          </div>
+          <a href="wizard/will.html" class="btn btn-gold w-full" style="margin-top: 12px;">Start a Will →</a>
         </div>
 
-        <div class="space-y-3">
-          <!-- Document Item 1 -->
-          <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; background-color: var(--ivory); border-radius: var(--radius-sm); border: 1px solid var(--border); flex-wrap: wrap; gap: 12px;">
+        <!-- POA Card -->
+        <div class="card card-hover space-y-4" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="space-y-4">
             <div style="display: flex; align-items: center; gap: 12px;">
-              <i data-lucide="scroll" style="color: var(--gold-dark); width: 22px; height: 22px; flex-shrink: 0;"></i>
-              <div>
-                <strong style="font-size: 14px; color: var(--navy);">Last Will & Testament</strong>
-                <div style="font-size: 12px; color: var(--muted);">Last Edited: 2 hours ago • Draft #WILL-8902</div>
+              <div style="width: 48px; height: 48px; border-radius: 10px; background: rgba(11,31,58,0.08); color: var(--navy); display: flex; align-items: center; justify-content: center;">
+                <i data-lucide="briefcase" style="width: 26px; height: 26px;"></i>
+              </div>
+              <h3 style="font-size: 20px; margin: 0;">Power of Attorney</h3>
+            </div>
+            <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">
+              Organize information about the principal, agent, authority and other relevant details.
+            </p>
+            <div style="background-color: var(--ivory); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border);" class="space-y-1">
+              <span style="font-size: 11px; font-weight: 700; color: var(--navy); text-transform: uppercase;">Key Included Fields:</span>
+              <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px;">
+                <span class="badge badge-outline" style="font-size: 11px;">Principal Information</span>
+                <span class="badge badge-outline" style="font-size: 11px;">Primary Agent Nomination</span>
+                <span class="badge badge-outline" style="font-size: 11px;">Financial Authorities</span>
+                <span class="badge badge-outline" style="font-size: 11px;">Healthcare Directives</span>
+                <span class="badge badge-outline" style="font-size: 11px;">Effective Date</span>
               </div>
             </div>
-            <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-              <span class="badge badge-completed">COMPLETED</span>
-              <a href="wizard/will.html" class="btn btn-outline btn-sm">Download PDF</a>
+          </div>
+          <a href="wizard/poa.html" class="btn btn-outline w-full" style="margin-top: 12px;">Create Power of Attorney →</a>
+        </div>
+
+        <!-- Affidavit Card -->
+        <div class="card card-hover space-y-4" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="space-y-4">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div style="width: 48px; height: 48px; border-radius: 10px; background: rgba(27,127,76,0.08); color: var(--success); display: flex; align-items: center; justify-content: center;">
+                <i data-lucide="file-badge" style="width: 26px; height: 26px;"></i>
+              </div>
+              <h3 style="font-size: 20px; margin: 0;">Sworn Affidavit</h3>
+            </div>
+            <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">
+              Prepare structured information for creating a formal sworn statement.
+            </p>
+            <div style="background-color: var(--ivory); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border);" class="space-y-1">
+              <span style="font-size: 11px; font-weight: 700; color: var(--navy); text-transform: uppercase;">Key Included Fields:</span>
+              <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px;">
+                <span class="badge badge-outline" style="font-size: 11px;">Affiant Identity</span>
+                <span class="badge badge-outline" style="font-size: 11px;">Statement of Facts</span>
+                <span class="badge badge-outline" style="font-size: 11px;">Supporting Evidence</span>
+                <span class="badge badge-outline" style="font-size: 11px;">Sworn Oath Clause</span>
+                <span class="badge badge-outline" style="font-size: 11px;">Notary Jurat Block</span>
+              </div>
+            </div>
+          </div>
+          <a href="wizard/affidavit.html" class="btn btn-outline w-full" style="margin-top: 12px;">Create Affidavit →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 INTERACTIVE PREPARATION EXPERIENCE -->
+  <section class="section" style="background-color: var(--ivory); border-y: 1px solid var(--border);">
+    <div class="container space-y-8">
+      <div class="text-center">
+        <span class="section-eyebrow">LIVE INTERFACE EXPERIENCE</span>
+        <h2 class="section-title">From Questions to Document</h2>
+        <p style="color: var(--muted); max-width: 600px; margin: 8px auto 0 auto;">
+          Instead of just explaining the workflow, experience the actual interface below.
+        </p>
+      </div>
+
+      <!-- Large Browser-Style Mockup Container -->
+      <div class="card space-y-6" style="background-color: var(--white); border: 1px solid var(--border); box-shadow: var(--shadow-lg); padding: 28px;">
+        
+        <!-- Step Switcher Tabs -->
+        <div style="display: flex; gap: 10px; border-bottom: 2px solid var(--border); padding-bottom: 12px; flex-wrap: wrap;" id="interactive-tabs">
+          <button class="btn btn-gold btn-sm active-step-tab" data-step="1">Step 1: Personal Info</button>
+          <button class="btn btn-outline btn-sm active-step-tab" data-step="2">Step 2: Beneficiaries</button>
+          <button class="btn btn-outline btn-sm active-step-tab" data-step="3">Step 3: Review & Generate</button>
+        </div>
+
+        <!-- Dynamic Content Box -->
+        <div id="interactive-step-container">
+          
+          <!-- Default Step 1 -->
+          <div class="step-view space-y-4" id="view-step-1">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <span style="font-size: 12px; font-weight: 800; color: var(--gold-dark); text-transform: uppercase;">Step 1</span>
+                <h3 style="color: var(--navy); margin: 2px 0 0 0; font-size: 20px;">PERSONAL INFORMATION</h3>
+                <p style="font-size: 13px; color: var(--muted); margin-top: 2px;">Let's start with some basic information.</p>
+              </div>
+              <span class="badge badge-draft">1 of 3</span>
+            </div>
+
+            <div class="space-y-3" style="max-width: 520px;">
+              <div class="form-group">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="input" value="Eleanor Vance" placeholder="Enter your full legal name">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Date of Birth</label>
+                <input type="date" class="input" value="1984-06-22">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Address</label>
+                <input type="text" class="input" value="742 Evergreen Terrace, Springfield, IL" placeholder="Street, City, State, ZIP">
+              </div>
+            </div>
+
+            <div style="padding-top: 8px;">
+              <button class="btn btn-gold demo-next-btn" data-next="2">Continue →</button>
             </div>
           </div>
 
-          <!-- Document Item 2 -->
-          <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; background-color: var(--ivory); border-radius: var(--radius-sm); border: 1px solid var(--border); flex-wrap: wrap; gap: 12px;">
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <i data-lucide="briefcase" style="color: var(--navy); width: 22px; height: 22px; flex-shrink: 0;"></i>
-              <div>
-                <strong style="font-size: 14px; color: var(--navy);">Durable Power of Attorney</strong>
-                <div style="font-size: 12px; color: var(--muted);">Last Edited: Yesterday • Draft #POA-4019</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 DASHBOARD SHOWCASE -->
+  <section class="section">
+    <div class="container space-y-8">
+      <div class="text-center">
+        <span class="section-eyebrow">DOCUMENT MANAGEMENT</span>
+        <h2 class="section-title">Your Documents, All in One Place</h2>
+        <p style="color: var(--muted); max-width: 600px; margin: 8px auto 0 auto;">
+          Review your actual dashboard design for managing active drafts and completed PDFs.
+        </p>
+      </div>
+
+      <div class="grid grid-2" style="align-items: center; gap: 32px;">
+        <!-- Left: Dashboard UI Mockup -->
+        <div class="card space-y-4" style="border: 1px solid var(--border); box-shadow: var(--shadow-md); background-color: var(--white); padding: 24px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 12px;">
+            <strong style="color: var(--navy); font-size: 16px;">MY DOCUMENTS</strong>
+            <span class="badge badge-outline" style="font-size: 11px;">2 Active Files</span>
+          </div>
+
+          <div class="space-y-3">
+            <!-- Doc 1 -->
+            <div style="padding: 14px; background-color: var(--ivory); border-radius: var(--radius-sm); border: 1px solid var(--border);" class="space-y-2">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <strong style="color: var(--navy); font-size: 14px;">Last Will & Testament</strong>
+                <span class="badge badge-draft">Draft</span>
+              </div>
+              <div style="font-size: 12px; color: var(--muted);">Updated Sep 15, 2026</div>
+              <div style="display: flex; gap: 8px; padding-top: 4px;">
+                <a href="wizard/will.html" class="btn btn-gold btn-sm">Continue</a>
+                <a href="wizard/will.html" class="btn btn-outline btn-sm">Preview</a>
               </div>
             </div>
-            <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-              <span class="badge badge-draft">IN PROGRESS</span>
-              <a href="wizard/poa.html" class="btn btn-gold btn-sm">Resume Draft →</a>
+
+            <!-- Doc 2 -->
+            <div style="padding: 14px; background-color: var(--ivory); border-radius: var(--radius-sm); border: 1px solid var(--border);" class="space-y-2">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <strong style="color: var(--navy); font-size: 14px;">Power of Attorney</strong>
+                <span class="badge badge-completed">Completed</span>
+              </div>
+              <div style="font-size: 12px; color: var(--muted);">Updated Sep 12, 2026</div>
+              <div style="display: flex; gap: 8px; padding-top: 4px;">
+                <a href="dashboard/documents.html" class="btn btn-outline btn-sm">View</a>
+                <a href="dashboard/documents.html" class="btn btn-gold btn-sm">Download</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Feature Point List -->
+        <div class="space-y-4">
+          <h3 style="font-size: 24px; color: var(--navy);">Manage Your Documents Easily</h3>
+          <ul class="space-y-3" style="font-size: 15px; color: var(--navy);">
+            <li style="display: flex; gap: 12px; align-items: center;">
+              <i data-lucide="check-circle" style="color: var(--gold); width: 20px; height: 20px;"></i>
+              <span><strong>Continue Existing Drafts:</strong> Pick up right where you left off.</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: center;">
+              <i data-lucide="check-circle" style="color: var(--gold); width: 20px; height: 20px;"></i>
+              <span><strong>Review Saved Information:</strong> Inspect all entered answers before exporting.</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: center;">
+              <i data-lucide="check-circle" style="color: var(--gold); width: 20px; height: 20px;"></i>
+              <span><strong>Update Documents:</strong> Modify executors or beneficiaries anytime.</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: center;">
+              <i data-lucide="check-circle" style="color: var(--gold); width: 20px; height: 20px;"></i>
+              <span><strong>Generate Legal PDFs:</strong> Instant high-resolution document output.</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: center;">
+              <i data-lucide="check-circle" style="color: var(--gold); width: 20px; height: 20px;"></i>
+              <span><strong>Download & Print:</strong> Ready for signature, witnessing, and notary.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 SAVE & RESUME -->
+  <section class="section bg-ivory" style="border-y: 1px solid var(--border);">
+    <div class="container space-y-8" style="max-width: 820px;">
+      <div class="text-center space-y-3">
+        <span class="section-eyebrow">FLEXIBLE WORKSPACE</span>
+        <h2 class="section-title">You Don't Have to Finish Everything at Once</h2>
+        <p style="color: var(--muted); font-size: 15px; line-height: 1.6; max-width: 640px; margin: 0 auto;">
+          Life doesn't always give you time to complete a document in one sitting. Save your progress and return when you're ready.
+        </p>
+      </div>
+
+      <!-- Visual Progress Card -->
+      <div class="card space-y-4" style="background-color: var(--white); border: 1px solid var(--border); box-shadow: var(--shadow-md); padding: 28px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <strong style="color: var(--navy); font-size: 15px; text-transform: uppercase;">YOUR PROGRESS</strong>
+          <span style="font-weight: 800; color: var(--gold-dark); font-size: 16px;">75% COMPLETE</span>
+        </div>
+
+        <!-- Visual Progress Bar -->
+        <div style="width: 100%; height: 12px; background-color: var(--border); border-radius: 6px; overflow: hidden;">
+          <div style="width: 75%; height: 100%; background: linear-gradient(90deg, var(--gold) 0%, var(--gold-dark) 100%); transition: width 0.4s ease;"></div>
+        </div>
+
+        <div class="grid grid-2" style="gap: 16px; padding-top: 8px;">
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--navy); font-weight: 600;">
+            <i data-lucide="check-circle-2" style="color: var(--success); width: 18px; height: 18px;"></i>
+            <span>Personal Information</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--navy); font-weight: 600;">
+            <i data-lucide="check-circle-2" style="color: var(--success); width: 18px; height: 18px;"></i>
+            <span>Beneficiaries</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--navy); font-weight: 600;">
+            <i data-lucide="check-circle-2" style="color: var(--success); width: 18px; height: 18px;"></i>
+            <span>Executor Nomination</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--muted);">
+            <i data-lucide="circle" style="color: var(--muted); width: 18px; height: 18px;"></i>
+            <span>Final Review & PDF</span>
+          </div>
+        </div>
+
+        <div style="text-align: center; padding-top: 12px;">
+          <a href="wizard/will.html" class="btn btn-gold">[ Continue Preparing Document ]</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 REVIEW & DOCUMENT PREVIEW -->
+  <section class="section">
+    <div class="container space-y-8">
+      <div class="text-center">
+        <span class="section-eyebrow">FINAL VERIFICATION</span>
+        <h2 class="section-title">Review Before You Generate</h2>
+        <p style="color: var(--muted); max-width: 600px; margin: 8px auto 0 auto;">
+          Inspect every section prior to document compilation to ensure 100% accuracy.
+        </p>
+      </div>
+
+      <div class="grid grid-2" style="align-items: center; gap: 32px;">
+        <!-- Left: Summary Checklist -->
+        <div class="card space-y-4" style="border-left: 5px solid var(--navy); background-color: var(--white);">
+          <h3 style="color: var(--navy); font-size: 18px; margin: 0;">DOCUMENT INFORMATION</h3>
+          
+          <div class="space-y-3" style="font-size: 14px; color: var(--navy);">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background-color: var(--ivory); border-radius: var(--radius-sm);">
+              <span>Personal Details</span>
+              <span style="color: var(--success); font-weight: 700;">✓ Verified</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background-color: var(--ivory); border-radius: var(--radius-sm);">
+              <span>Beneficiaries</span>
+              <span style="color: var(--success); font-weight: 700;">✓ Verified</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background-color: var(--ivory); border-radius: var(--radius-sm);">
+              <span>Executor Nomination</span>
+              <span style="color: var(--success); font-weight: 700;">✓ Verified</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background-color: var(--ivory); border-radius: var(--radius-sm);">
+              <span>Declared Assets</span>
+              <span style="color: var(--success); font-weight: 700;">✓ Verified</span>
             </div>
           </div>
 
-          <!-- Document Item 3 -->
-          <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; background-color: var(--ivory); border-radius: var(--radius-sm); border: 1px solid var(--border); flex-wrap: wrap; gap: 12px;">
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <i data-lucide="file-badge" style="color: var(--success); width: 22px; height: 22px; flex-shrink: 0;"></i>
-              <div>
-                <strong style="font-size: 14px; color: var(--navy);">Sworn Affidavit</strong>
-                <div style="font-size: 12px; color: var(--muted);">Last Edited: 3 days ago • Draft #AFF-1120</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-              <span class="badge badge-completed">COMPLETED</span>
-              <a href="wizard/affidavit.html" class="btn btn-outline btn-sm">Download PDF</a>
-            </div>
+          <div style="padding-top: 8px;">
+            <a href="wizard/will.html?step=7" class="btn btn-gold btn-sm">Launch Review Step →</a>
+          </div>
+        </div>
+
+        <!-- Right: PDF Preview Sheet -->
+        <div style="background-color: var(--white); border: 2px solid var(--navy); border-radius: var(--radius-md); padding: 24px; box-shadow: var(--shadow-lg);" class="space-y-3">
+          <div style="text-align: center; border-bottom: 2px solid var(--gold); padding-bottom: 12px;">
+            <div style="font-size: 11px; font-weight: 800; color: var(--gold); text-transform: uppercase;">Legal Document Compilation</div>
+            <h4 style="font-family: Georgia, serif; font-size: 18px; color: var(--navy); margin: 4px 0 0 0;">LAST WILL AND TESTAMENT</h4>
+          </div>
+
+          <p style="font-family: Georgia, serif; font-size: 12px; color: var(--navy); line-height: 1.6;">
+            I, <u>Eleanor Vance</u>, residing at <u>742 Evergreen Terrace, Springfield, IL</u>, being of sound mind, declare this instrument to be my Last Will and Testament...
+          </p>
+
+          <div style="border-top: 1px dashed var(--border); padding-top: 10px; display: flex; justify-content: space-between; font-size: 11px; color: var(--muted);">
+            <span>Signature Line Included</span>
+            <span>Notary Block Formatted</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Final Product CTA Banner -->
-  <section class="section" style="background-color: var(--navy); color: var(--white); text-align: center;">
+  <!-- 08 PRIVACY & RESPONSIBLE PREPARATION -->
+  <section class="section bg-ivory" style="border-y: 1px solid var(--border);">
+    <div class="container space-y-8">
+      <div class="text-center">
+        <span class="section-eyebrow">SECURITY & PRIVACY</span>
+        <h2 class="section-title">Designed With Privacy in Mind</h2>
+        <p style="color: var(--muted); max-width: 600px; margin: 8px auto 0 auto;">
+          We build with data minimization and client-side persistence standards.
+        </p>
+      </div>
+
+      <div class="grid grid-2" style="gap: 24px;">
+        <div class="card space-y-3" style="background-color: var(--white);">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <i data-lucide="shield" style="color: var(--navy); width: 22px; height: 22px;"></i>
+            <h4 style="margin: 0; font-size: 16px;">Clear Information Handling</h4>
+          </div>
+          <p style="font-size: 13px; color: var(--muted); line-height: 1.6;">
+            All entered form state lives securely in your local browser LocalStorage session.
+          </p>
+        </div>
+
+        <div class="card space-y-3" style="background-color: var(--white);">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <i data-lucide="lock" style="color: var(--navy); width: 22px; height: 22px;"></i>
+            <h4 style="margin: 0; font-size: 16px;">Secure Account Experience</h4>
+          </div>
+          <p style="font-size: 13px; color: var(--muted); line-height: 1.6;">
+            Browser session state isolation prevents unauthorized cross-session access.
+          </p>
+        </div>
+
+        <div class="card space-y-3" style="background-color: var(--white);">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <i data-lucide="database" style="color: var(--navy); width: 22px; height: 22px;"></i>
+            <h4 style="margin: 0; font-size: 16px;">No Unnecessary Data Collection</h4>
+          </div>
+          <p style="font-size: 13px; color: var(--muted); line-height: 1.6;">
+            We do not monetize, harvest, or transmit your private legal records to third parties.
+          </p>
+        </div>
+
+        <div class="card space-y-3" style="background-color: var(--white);">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <i data-lucide="file-check" style="color: var(--navy); width: 22px; height: 22px;"></i>
+            <h4 style="margin: 0; font-size: 16px;">Transparent Preparation Process</h4>
+          </div>
+          <p style="font-size: 13px; color: var(--muted); line-height: 1.6;">
+            Clear operational disclaimers ensuring you always understand what our software provides.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 WHY LEXDRAFT? -->
+  <section class="section">
+    <div class="container space-y-8">
+      <div class="text-center">
+        <span class="section-eyebrow">OUR PRODUCT PRINCIPLES</span>
+        <h2 class="section-title">Why LexDraft?</h2>
+        <p style="color: var(--muted); max-width: 600px; margin: 8px auto 0 auto;">
+          Built upon four fundamental product principles for document preparation.
+        </p>
+      </div>
+
+      <div class="grid grid-4" style="gap: 20px;">
+        <!-- Principle 1: Simple -->
+        <div class="card space-y-3 text-center" style="border-top: 4px solid var(--gold);">
+          <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(200,164,93,0.12); color: var(--gold-dark); display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+            <i data-lucide="smile" style="width: 24px; height: 24px;"></i>
+          </div>
+          <h4>Simple</h4>
+          <p style="font-size: 13px; color: var(--muted); line-height: 1.5;">Guided questions make preparation easier to navigate.</p>
+        </div>
+
+        <!-- Principle 2: Structured -->
+        <div class="card space-y-3 text-center" style="border-top: 4px solid var(--navy);">
+          <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(11,31,58,0.08); color: var(--navy); display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+            <i data-lucide="layers" style="width: 24px; height: 24px;"></i>
+          </div>
+          <h4>Structured</h4>
+          <p style="font-size: 13px; color: var(--muted); line-height: 1.5;">Information is organized into logical, statutory sections.</p>
+        </div>
+
+        <!-- Principle 3: Flexible -->
+        <div class="card space-y-3 text-center" style="border-top: 4px solid var(--success);">
+          <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(27,127,76,0.08); color: var(--success); display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+            <i data-lucide="clock" style="width: 24px; height: 24px;"></i>
+          </div>
+          <h4>Flexible</h4>
+          <p style="font-size: 13px; color: var(--muted); line-height: 1.5;">Save your progress and return whenever you are ready.</p>
+        </div>
+
+        <!-- Principle 4: Transparent -->
+        <div class="card space-y-3 text-center" style="border-top: 4px solid #6366F1;">
+          <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(99,102,241,0.08); color: #6366F1; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+            <i data-lucide="eye" style="width: 24px; height: 24px;"></i>
+          </div>
+          <h4>Transparent</h4>
+          <p style="font-size: 13px; color: var(--muted); line-height: 1.5;">Users can review their information before generating documents.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 FINAL CTA -->
+  <section class="section bg-navy text-white text-center" style="padding: 44px 0;">
     <div class="container space-y-4">
-      <h2 class="section-title" style="color: var(--white);">Experience Guided Document Preparation</h2>
-      <p style="color: #94A3B8; max-width: 500px; margin: 0 auto;">Start creating your essential estate document with our step-by-step workflow today.</p>
-      <a href="wizard/will.html" class="btn btn-gold btn-lg">Start Creating Your Document</a>
+      <h2 class="section-title" style="color: var(--white); font-size: 28px;">Start Preparing Your Document Today</h2>
+      <p style="color: #94A3B8; max-width: 580px; margin: 0 auto; font-size: 15px;">
+        Choose a document and follow a guided preparation experience designed to keep the process simple and organized.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; padding-top: 8px;">
+        <a href="wizard/will.html" class="btn btn-gold btn-lg">Get Started</a>
+        <a href="services.html" class="btn btn-ghost btn-lg" style="color: var(--white); border-color: rgba(255,255,255,0.2);">Explore Documents</a>
+      </div>
     </div>
   </section>
 
@@ -367,101 +700,152 @@
   <script type="module" src="js/navigation.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Workflow Simulator Tab Interactivity
-      const tabs = document.querySelectorAll('.workflow-tab-btn');
-      const displayBox = document.getElementById('workflow-display-box');
+      // Interactive Preparation Experience Tab Switcher (Section 04)
+      const tabs = document.querySelectorAll('#interactive-tabs .active-step-tab');
+      const stepContainer = document.getElementById('interactive-step-container');
 
-      const simContent = {
-        '1': {
-          title: 'Step 1: Select Legal Document Solution',
-          desc: 'Choose between Last Will & Testament, Power of Attorney, or Sworn Affidavit. Our engine automatically loads mandatory statutory revocation clauses.',
-          log: 'LOGIC CHECK: Statutory Revocation Template Loaded & Initialized.',
-          cta: 'wizard/will.html',
-          btnText: 'Launch Will Wizard Now →'
-        },
-        '2': {
-          title: 'Step 2: Personal Profile & Residence Identification',
-          desc: 'Enter your full legal name, primary address, and marital status. Our validation logic verifies legal age and jurisdiction suitability.',
-          log: 'VALIDATION: Testator Age >= 18 & Residence Address Recorded.',
-          cta: 'wizard/will.html?step=1',
-          btnText: 'Configure Personal Profile →'
-        },
-        '3': {
-          title: 'Step 3: Asset Inventory & Real Property Allocation',
-          desc: 'Itemize real estate property, bank accounts, investments, and personal heirlooms to prepare beneficiary splits.',
-          log: 'ASSET ENGINE: Real Estate & Financial Accounts Registered.',
-          cta: 'wizard/will.html?step=3',
-          btnText: 'Configure Asset Inventory →'
-        },
-        '4': {
-          title: 'Step 4: Primary & Contingent Beneficiaries',
-          desc: 'Assign percentage shares across primary beneficiaries (e.g. Spouse 100%) and designate contingent beneficiaries if primary predeceases.',
-          log: 'ALLOCATION CHECK: Primary Beneficiary Shares Sum = 100%.',
-          cta: 'wizard/will.html?step=4',
-          btnText: 'Assign Beneficiaries →'
-        },
-        '5': {
-          title: 'Step 5: Executor & Guardian Nominations',
-          desc: 'Nominate your Primary Executor to manage probate, a Successor Executor, and Guardians for any minor children.',
-          log: 'APPOINTMENT CHECK: Successor Representative & Minor Guardian Set.',
-          cta: 'wizard/will.html?step=5',
-          btnText: 'Nominate Executor & Guardian →'
-        },
-        '6': {
-          title: 'Step 6: Formal PDF Generation & Signatures',
-          desc: 'Your answers are formatted into a legal PDF with double borders, gold crest seal emblem, witness signature blocks, and notary jurat sections.',
-          log: 'PDF ENGINE: Vector Legal Layout Built for Printable A4 Output.',
-          cta: 'wizard/will.html?step=9',
-          btnText: 'Preview PDF Compiler →'
-        }
+      const stepViews = {
+        '1': `
+          <div class="step-view space-y-4" id="view-step-1">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <span style="font-size: 12px; font-weight: 800; color: var(--gold-dark); text-transform: uppercase;">Step 1</span>
+                <h3 style="color: var(--navy); margin: 2px 0 0 0; font-size: 20px;">PERSONAL INFORMATION</h3>
+                <p style="font-size: 13px; color: var(--muted); margin-top: 2px;">Let's start with some basic information.</p>
+              </div>
+              <span class="badge badge-draft">1 of 3</span>
+            </div>
+
+            <div class="space-y-3" style="max-width: 520px;">
+              <div class="form-group">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="input" value="Eleanor Vance" placeholder="Enter your full legal name">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Date of Birth</label>
+                <input type="date" class="input" value="1984-06-22">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Address</label>
+                <input type="text" class="input" value="742 Evergreen Terrace, Springfield, IL" placeholder="Street, City, State, ZIP">
+              </div>
+            </div>
+
+            <div style="padding-top: 8px;">
+              <button class="btn btn-gold demo-next-btn" data-next="2">Continue →</button>
+            </div>
+          </div>
+        `,
+        '2': `
+          <div class="step-view space-y-4" id="view-step-2">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <span style="font-size: 12px; font-weight: 800; color: var(--gold-dark); text-transform: uppercase;">Step 2</span>
+                <h3 style="color: var(--navy); margin: 2px 0 0 0; font-size: 20px;">YOUR BENEFICIARIES</h3>
+                <p style="font-size: 13px; color: var(--muted); margin-top: 2px;">Who would you like to include?</p>
+              </div>
+              <span class="badge badge-draft">2 of 3</span>
+            </div>
+
+            <div class="space-y-3" style="max-width: 520px;">
+              <div class="form-group">
+                <label class="form-label">Name</label>
+                <input type="text" class="input" value="Arthur Vance" placeholder="Enter beneficiary full name">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Relationship</label>
+                <select class="input">
+                  <option selected>Spouse</option>
+                  <option>Son</option>
+                  <option>Daughter</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Allocation Share (%)</label>
+                <input type="text" class="input" value="100%">
+              </div>
+            </div>
+
+            <div style="padding-top: 8px; display: flex; gap: 8px;">
+              <button class="btn btn-outline demo-next-btn" data-next="1">← Back</button>
+              <button class="btn btn-gold demo-next-btn" data-next="3">Continue →</button>
+            </div>
+          </div>
+        `,
+        '3': `
+          <div class="step-view space-y-4" id="view-step-3">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <span style="font-size: 12px; font-weight: 800; color: var(--gold-dark); text-transform: uppercase;">Step 3</span>
+                <h3 style="color: var(--navy); margin: 2px 0 0 0; font-size: 20px;">REVIEW YOUR INFORMATION</h3>
+                <p style="font-size: 13px; color: var(--muted); margin-top: 2px;">Verify your details prior to document generation.</p>
+              </div>
+              <span class="badge badge-completed">3 of 3</span>
+            </div>
+
+            <div class="space-y-2" style="max-width: 520px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background-color: var(--ivory); border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                <strong style="color: var(--navy); font-size: 13px;">Personal Information</strong>
+                <span style="color: var(--success); font-weight: 700;">✓</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background-color: var(--ivory); border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                <strong style="color: var(--navy); font-size: 13px;">Beneficiaries</strong>
+                <span style="color: var(--success); font-weight: 700;">✓</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background-color: var(--ivory); border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                <strong style="color: var(--navy); font-size: 13px;">Executor</strong>
+                <span style="color: var(--success); font-weight: 700;">✓</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background-color: var(--ivory); border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                <strong style="color: var(--navy); font-size: 13px;">Assets</strong>
+                <span style="color: var(--success); font-weight: 700;">✓</span>
+              </div>
+            </div>
+
+            <div style="padding-top: 12px; display: flex; gap: 12px; flex-wrap: wrap;">
+              <button class="btn btn-outline demo-next-btn" data-next="2">[ Edit ]</button>
+              <a href="wizard/will.html?step=9" class="btn btn-gold">[ Generate PDF ]</a>
+            </div>
+          </div>
+        `
       };
 
-      tabs.forEach(btn => {
-        btn.addEventListener('click', () => {
-          tabs.forEach(t => t.classList.remove('active'));
-          btn.classList.add('active');
-
-          const step = btn.getAttribute('data-wf-step');
-          const data = simContent[step];
-          if (displayBox && data) {
-            displayBox.innerHTML = `
-              <div style="display: flex; align-items: center; gap: 12px; color: var(--gold);">
-                <i data-lucide="file-check" style="width: 24px; height: 24px;"></i>
-                <h3 style="color: var(--navy); margin: 0;">${data.title}</h3>
-              </div>
-              <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">${data.desc}</p>
-              <div style="background-color: var(--navy); color: var(--gold); padding: 14px 18px; border-radius: var(--radius-md); font-family: monospace; font-size: 12px;">
-                ${data.log}
-              </div>
-              <a href="${data.cta}" class="btn btn-gold btn-sm" style="margin-top: 12px;">${data.btnText}</a>
-            `;
-            if (window.lucide) window.lucide.createIcons();
+      function renderStep(stepNum) {
+        tabs.forEach(t => {
+          if (t.getAttribute('data-step') === String(stepNum)) {
+            t.className = 'btn btn-gold btn-sm active-step-tab';
+          } else {
+            t.className = 'btn btn-outline btn-sm active-step-tab';
           }
+        });
+
+        if (stepContainer && stepViews[stepNum]) {
+          stepContainer.innerHTML = stepViews[stepNum];
+          bindNextButtons();
+        }
+      }
+
+      function bindNextButtons() {
+        document.querySelectorAll('.demo-next-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const nextStep = btn.getAttribute('data-next');
+            if (nextStep) renderStep(nextStep);
+          });
+        });
+      }
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const step = tab.getAttribute('data-step');
+          renderStep(step);
         });
       });
 
-      // Calculator Sliders
-      const rateSlider = document.getElementById('rate-slider');
-      const familySlider = document.getElementById('family-slider');
-      const rateVal = document.getElementById('rate-val');
-      const familyVal = document.getElementById('family-val');
-      const costAtt = document.getElementById('cost-attorney');
-      const costSav = document.getElementById('cost-savings');
-
-      function updateCalc() {
-        if (!rateSlider || !familySlider) return;
-        const rate = parseInt(rateSlider.value);
-        const family = parseInt(familySlider.value);
-        const total = (3 + (family * 0.5)) * rate;
-        
-        rateVal.textContent = `$${rate} / hr`;
-        familyVal.textContent = `${family} Member${family > 1 ? 's' : ''}`;
-        costAtt.textContent = `$${Math.round(total).toLocaleString()}`;
-        costSav.textContent = `$${Math.round(total).toLocaleString()}`;
-      }
-
-      rateSlider?.addEventListener('input', updateCalc);
-      familySlider?.addEventListener('input', updateCalc);
+      bindNextButtons();
     });
   </script>
 </body>

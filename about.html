@@ -23,7 +23,7 @@
       </a>
 
       <ul class="nav-links">
-        <li><a href="index.html" class="nav-link">Home 1</a></li>
+        <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="home2.html" class="nav-link">Home 2</a></li>
         <li><a href="about.html" class="nav-link active">About</a></li>
         <li><a href="services.html" class="nav-link">Services</a></li>
@@ -50,7 +50,6 @@
               <li><a href="login.html"><i data-lucide="log-in"></i> Account Portal Login</a></li>
               <li><a href="login.html"><i data-lucide="user-plus"></i> Register Account</a></li>
               <li><a href="dashboard/index.html"><i data-lucide="layout-dashboard"></i> Client Dashboard</a></li>
-              <li><a href="admin/index.html"><i data-lucide="shield"></i> Admin Panel</a></li>
             </ul>
           </div>
         </div>
@@ -63,75 +62,88 @@
     </div>
   </header>
 
-  <!-- Hero Section: Split Media Layout -->
-  <section class="hero-section" style="padding: 40px 0 32px 0;">
-    <div class="container">
-      <div class="grid grid-2" style="align-items: center; gap: 32px;">
-        <div class="space-y-4">
-          <span class="section-eyebrow">OUR PURPOSE & VISION</span>
-          <h1 class="hero-title" style="font-size: clamp(28px, 4vw, 42px);">Making Legal Document Preparation Simpler & Accessible</h1>
-          <p style="color: var(--muted); font-size: 15px; line-height: 1.6;">
-            LexDraft provides guided digital tools to help individuals organize essential estate details, financial authorities, and sworn declarations without legalese or subscription traps.
-          </p>
-          <div style="display: flex; gap: 12px; flex-wrap: wrap; padding-top: 8px;">
-            <a href="wizard/will.html" class="btn btn-gold">Explore Document Wizards →</a>
-            <a href="services.html#faq" class="btn btn-outline">Read FAQs</a>
-          </div>
+  <!-- 1. WHO ARE YOU? (Hero Section) -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="space-y-6">
+        <span class="section-eyebrow">WHO WE ARE</span>
+        <h1 class="hero-title">Empowering Everyone to Prepare Legal Documents</h1>
+        <p style="font-size: 18px; color: var(--muted); max-width: 560px; line-height: 1.6;">
+          LexDraft is a premier self-guided legal technology platform. We provide intuitive software tools that walk individuals through organizing essential estate plans, financial powers of attorney, and sworn affidavits—without legalese or expensive attorney consultation fees.
+        </p>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap; padding-top: 8px;">
+          <a href="wizard/will.html" class="btn btn-gold btn-lg">Explore Document Wizards →</a>
+          <a href="services.html" class="btn btn-outline btn-lg">Our Offerings</a>
         </div>
+      </div>
 
-        <div>
-          <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-lg);">
-            <img src="images/hero_legal_tech.jpg" alt="LexDraft Legal Technology Workspace" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-          </div>
+      <div>
+        <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-lg);">
+          <img src="images/hero_legal_tech.jpg" alt="LexDraft Legal Technology Workspace" style="width: 100%; height: 280px; object-fit: cover; display: block;">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4 Key Metrics & Value Strip -->
-  <section class="section bg-navy text-white text-center" style="padding: 24px 0;">
-    <div class="container grid grid-4" style="gap: 16px;">
-      <div class="space-y-1">
-        <h3 style="color: var(--gold); font-size: 28px; font-weight: 800; margin: 0;">100%</h3>
-        <p style="color: #94A3B8; font-size: 13px; font-weight: 600;">Local Browser Data Privacy</p>
+  <!-- 2. WHY DID YOU START? -->
+  <section class="section bg-ivory" style="border-y: 1px solid var(--border);">
+    <div class="container space-y-8">
+      <div class="text-center">
+        <span class="section-eyebrow">THE MOTIVATION</span>
+        <h2 class="section-title">Why Did We Start LexDraft?</h2>
+        <p style="color: var(--muted); font-size: 16px; max-width: 620px; margin: 8px auto 0 auto; line-height: 1.6;">
+          We founded LexDraft after witnessing millions of families delay vital estate planning simply because traditional legal services were prohibitively expensive and intimidating.
+        </p>
       </div>
-      <div class="space-y-1">
-        <h3 style="color: var(--gold); font-size: 28px; font-weight: 800; margin: 0;">&lt; 15m</h3>
-        <p style="color: #94A3B8; font-size: 13px; font-weight: 600;">Average Time to Complete PDF</p>
-      </div>
-      <div class="space-y-1">
-        <h3 style="color: var(--gold); font-size: 28px; font-weight: 800; margin: 0;">0</h3>
-        <p style="color: #94A3B8; font-size: 13px; font-weight: 600;">Subscription or Hidden Fees</p>
-      </div>
-      <div class="space-y-1">
-        <h3 style="color: var(--gold); font-size: 28px; font-weight: 800; margin: 0;">3</h3>
-        <p style="color: #94A3B8; font-size: 13px; font-weight: 600;">Core Self-Service Solutions</p>
+
+      <div class="grid grid-3">
+        <div class="card space-y-3" style="background-color: var(--white);">
+          <div style="width: 44px; height: 44px; border-radius: 8px; background: rgba(11,31,58,0.08); color: var(--navy); display: flex; align-items: center; justify-content: center;">
+            <i data-lucide="lock" style="width: 22px; height: 22px;"></i>
+          </div>
+          <h3 style="font-size: 18px; margin: 0;">Overcoming Cost Barriers</h3>
+          <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">Traditional law firm rates made basic estate planning inaccessible to the average household. We set out to make self-guided legal tools 100% accessible.</p>
+        </div>
+
+        <div class="card space-y-3" style="background-color: var(--white);">
+          <div style="width: 44px; height: 44px; border-radius: 8px; background: rgba(200,164,93,0.12); color: var(--gold-dark); display: flex; align-items: center; justify-content: center;">
+            <i data-lucide="file-question" style="width: 22px; height: 22px;"></i>
+          </div>
+          <h3 style="font-size: 18px; margin: 0;">Demystifying Legalese</h3>
+          <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">Raw PDF forms left people guessing what details were required. We built plain-language guided prompts to provide total clarity at every step.</p>
+        </div>
+
+        <div class="card space-y-3" style="background-color: var(--white);">
+          <div style="width: 44px; height: 44px; border-radius: 8px; background: rgba(27,127,76,0.08); color: var(--success); display: flex; align-items: center; justify-content: center;">
+            <i data-lucide="user-check" style="width: 22px; height: 22px;"></i>
+          </div>
+          <h3 style="font-size: 18px; margin: 0;">Restoring Data Privacy</h3>
+          <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">Personal asset details belong to you. We designed a privacy-first local browser storage architecture that keeps data safely on your device.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Story & Mission Split Card -->
-  <section class="section" style="padding: 36px 0;">
+  <!-- 3. YOUR STORY -->
+  <section class="section">
     <div class="container">
-      <div class="card space-y-4" style="padding: 28px;">
-        <div class="grid grid-2" style="align-items: center; gap: 28px;">
+      <div class="card space-y-6" style="padding: 32px; border: 1px solid var(--border);">
+        <div class="grid grid-2" style="align-items: center; gap: 32px;">
           <div>
-            <img src="images/family_estate_planning.jpg" alt="Family organizing legal planning documents" style="width: 100%; height: 270px; object-fit: cover; border-radius: var(--radius-md); border: 1px solid var(--border); box-shadow: var(--shadow-md);">
+            <img src="images/family_estate_planning.jpg" alt="Family organizing estate planning documents" style="width: 100%; height: 290px; object-fit: cover; border-radius: var(--radius-md); border: 1px solid var(--border); box-shadow: var(--shadow-md);">
           </div>
 
-          <div class="space-y-3">
-            <span class="section-eyebrow">OUR MISSION</span>
-            <h2 class="section-title" style="text-align: left; font-size: 24px;">The Problem & Our Solution</h2>
-            <p style="font-size: 14px; color: var(--navy); line-height: 1.6;">
-              Traditional legal document preparation has often felt intimidating, expensive, and confusing. Blank forms leave people guessing what information is required.
+          <div class="space-y-4">
+            <span class="section-eyebrow">OUR JOURNEY</span>
+            <h2 class="section-title" style="text-align: left;">The LexDraft Story</h2>
+            <p style="font-size: 16px; color: var(--navy); line-height: 1.6;">
+              LexDraft began as a collaborative effort between legal technology architects and software engineers determined to modernize how estate documents are prepared.
             </p>
-            <p style="font-size: 13px; color: var(--muted); line-height: 1.6;">
-              LexDraft breaks complex statutory documents down into intuitive step-by-step questions. Users can draft, review, and auto-save progress directly in browser storage before generating printable PDFs.
+            <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">
+              Over the years, our platform has evolved into a comprehensive digital document workspace—helping thousands of individuals draft Last Will & Testaments, Durable Powers of Attorney, and Sworn Affidavits with confidence.
             </p>
-            <div style="display: flex; flex-direction: column; gap: 6px; padding-top: 4px; font-size: 13px; color: var(--navy); font-weight: 600;">
-              <span>✓ Plain-language guided step sequence</span>
-              <span>✓ Instant LocalStorage auto-save & recovery</span>
-              <span>✓ Printable PDF download with witness blocks</span>
+            <div style="padding-top: 4px;">
+              <span class="badge badge-warning" style="padding: 8px 16px; font-size: 12px; font-weight: 700;">PROUDLY SERVING THOUSANDS OF TESTATORS NATIONWIDE</span>
             </div>
           </div>
         </div>
@@ -139,94 +151,185 @@
     </div>
   </section>
 
-  <!-- Meet Our Leadership & Design Team -->
-  <section class="section bg-ivory" style="padding: 36px 0;">
-    <div class="container space-y-6">
+  <!-- 4. MISSION -->
+  <section class="section bg-navy text-white">
+    <div class="container text-center space-y-4" style="max-width: 760px;">
+      <span class="section-eyebrow" style="color: var(--gold);">OUR MISSION</span>
+      <h2 class="section-title" style="color: var(--white);">Democratizing Legal Document Preparation</h2>
+      <p style="color: #94A3B8; font-size: 18px; line-height: 1.7;">
+        Our mission is to empower every individual to document their legal wishes, protect their families, and designate trusted decision-makers through accessible, accurate, and transparent self-service software.
+      </p>
+    </div>
+  </section>
+
+  <!-- 5. VALUES -->
+  <section class="section bg-ivory" style="border-y: 1px solid var(--border);">
+    <div class="container space-y-8">
       <div class="text-center">
-        <span class="section-eyebrow">OUR TEAM</span>
-        <h2 class="section-title" style="font-size: 24px;">Built by Legal Tech & Security Experts</h2>
-        <p style="color: var(--muted); max-width: 580px; margin: 4px auto 0 auto; font-size: 14px;">
-          Meet the team dedicated to making legal self-service tools transparent, secure, and accessible.
+        <span class="section-eyebrow">WHAT GUIDES US</span>
+        <h2 class="section-title">Our Core Values</h2>
+        <p style="color: var(--muted); font-size: 16px; max-width: 580px; margin: 8px auto 0 auto; line-height: 1.6;">
+          The principles that shape our software engineering, legal compliance, and customer experience.
         </p>
       </div>
 
-      <div class="grid grid-3" style="gap: 20px;">
+      <div class="grid grid-3">
+        <div class="card space-y-3" style="background-color: var(--white);">
+          <i data-lucide="eye" style="color: var(--gold); width: 28px; height: 28px;"></i>
+          <h3 style="font-size: 18px; margin: 0;">Total Transparency</h3>
+          <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">No hidden fees, surprise subscriptions, or dark UX patterns. What you see is what you get.</p>
+        </div>
+
+        <div class="card space-y-3" style="background-color: var(--white);">
+          <i data-lucide="shield" style="color: var(--gold); width: 28px; height: 28px;"></i>
+          <h3 style="font-size: 18px; margin: 0;">Uncompromised Privacy</h3>
+          <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">Local browser storage ensures your family assets and beneficiaries are never sold or monetized.</p>
+        </div>
+
+        <div class="card space-y-3" style="background-color: var(--white);">
+          <i data-lucide="file-check" style="color: var(--gold); width: 28px; height: 28px;"></i>
+          <h3 style="font-size: 18px; margin: 0;">Statutory Precision</h3>
+          <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">Every template clause is structured in accordance with standard legal requirement guidelines.</p>
+        </div>
+
+        <div class="card space-y-3" style="background-color: var(--white);">
+          <i data-lucide="heart-handshake" style="color: var(--gold); width: 28px; height: 28px;"></i>
+          <h3 style="font-size: 18px; margin: 0;">User Empowerment</h3>
+          <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">We give you full ownership of your drafts. Edit, update, and re-compile your documents anytime.</p>
+        </div>
+
+        <div class="card space-y-3" style="background-color: var(--white);">
+          <i data-lucide="globe" style="color: var(--gold); width: 28px; height: 28px;"></i>
+          <h3 style="font-size: 18px; margin: 0;">Universal Accessibility</h3>
+          <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">Mobile-first responsive design, RTL layout options, and clear fonts ensure equal access for all.</p>
+        </div>
+
+        <div class="card space-y-3" style="background-color: var(--white);">
+          <i data-lucide="sparkles" style="color: var(--gold); width: 28px; height: 28px;"></i>
+          <h3 style="font-size: 18px; margin: 0;">Continuous Innovation</h3>
+          <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">Constantly refining our document wizard interface and instant PDF generation performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. TEAM -->
+  <section class="section">
+    <div class="container space-y-8">
+      <div class="text-center">
+        <span class="section-eyebrow">OUR TEAM</span>
+        <h2 class="section-title">Built by Legal Tech & Security Experts</h2>
+        <p style="color: var(--muted); font-size: 16px; max-width: 580px; margin: 8px auto 0 auto; line-height: 1.6;">
+          Meet the dedicated team building accessible, secure, and intuitive legal document tools.
+        </p>
+      </div>
+
+      <div class="grid grid-3">
         <!-- Member 1: Sarah Mitchell -->
-        <div class="card space-y-3 text-center" style="background-color: var(--white); padding: 24px;">
-          <div style="width: 96px; height: 96px; border-radius: 50%; overflow: hidden; margin: 0 auto; border: 3px solid var(--gold); box-shadow: var(--shadow-md);">
+        <div class="card space-y-3 text-center" style="background-color: var(--white); padding: 28px;">
+          <div style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden; margin: 0 auto; border: 3px solid var(--gold); box-shadow: var(--shadow-md);">
             <img src="images/founder_sarah.jpg" alt="Sarah Mitchell" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div>
-            <h4 style="font-size: 16px; color: var(--navy); margin-bottom: 2px;">Sarah Mitchell</h4>
-            <span style="font-size: 12px; color: var(--gold-dark); font-weight: 700;">Head of Legal Design & Architecture</span>
+            <h3 style="font-size: 18px; color: var(--navy); margin-bottom: 2px;">Sarah Mitchell</h3>
+            <span style="font-size: 13px; color: var(--gold-dark); font-weight: 700;">Head of Legal Design & Architecture</span>
           </div>
-          <p style="font-size: 13px; color: var(--muted); line-height: 1.5;">
-            Pioneering plain-language legal clause translation to eliminate confusion for everyday users.
+          <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">
+            Translating complex statutory requirements into clear, plain-language guided wizard questions.
           </p>
         </div>
 
         <!-- Member 2: David Chen -->
-        <div class="card space-y-3 text-center" style="background-color: var(--white); padding: 24px;">
-          <div style="width: 96px; height: 96px; border-radius: 50%; overflow: hidden; margin: 0 auto; border: 3px solid var(--navy); box-shadow: var(--shadow-md);">
+        <div class="card space-y-3 text-center" style="background-color: var(--white); padding: 28px;">
+          <div style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden; margin: 0 auto; border: 3px solid var(--navy); box-shadow: var(--shadow-md);">
             <img src="images/founder_david.jpg" alt="David Chen" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div>
-            <h4 style="font-size: 16px; color: var(--navy); margin-bottom: 2px;">David Chen</h4>
-            <span style="font-size: 12px; color: var(--navy); font-weight: 700;">Lead Software Engineer</span>
+            <h3 style="font-size: 18px; color: var(--navy); margin-bottom: 2px;">David Chen</h3>
+            <span style="font-size: 13px; color: var(--navy); font-weight: 700;">Lead Software Engineer</span>
           </div>
-          <p style="font-size: 13px; color: var(--muted); line-height: 1.5;">
-            Architecting high-performance client-side wizard state management and instant PDF compilation engines.
+          <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">
+            Architecting real-time state management, LocalStorage auto-saving, and high-resolution PDF generation.
           </p>
         </div>
 
         <!-- Member 3: Elena Rostova -->
-        <div class="card space-y-3 text-center" style="background-color: var(--white); padding: 24px;">
-          <div style="width: 96px; height: 96px; border-radius: 50%; overflow: hidden; margin: 0 auto; border: 3px solid var(--success); box-shadow: var(--shadow-md);">
+        <div class="card space-y-3 text-center" style="background-color: var(--white); padding: 28px;">
+          <div style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden; margin: 0 auto; border: 3px solid var(--success); box-shadow: var(--shadow-md);">
             <img src="images/founder_elena.jpg" alt="Elena Rostova" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div>
-            <h4 style="font-size: 16px; color: var(--navy); margin-bottom: 2px;">Elena Rostova</h4>
-            <span style="font-size: 12px; color: var(--success); font-weight: 700;">Chief Privacy & Security Officer</span>
+            <h3 style="font-size: 18px; color: var(--navy); margin-bottom: 2px;">Elena Rostova</h3>
+            <span style="font-size: 13px; color: var(--success); font-weight: 700;">Chief Privacy & Security Officer</span>
           </div>
-          <p style="font-size: 13px; color: var(--muted); line-height: 1.5;">
-            Enforcing strict zero-tracking local data persistence standards across all client browser sessions.
+          <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">
+            Ensuring strict client-side data isolation, zero-tracking session standards, and privacy compliance.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Platform Transparency Box -->
-  <section class="section" style="padding: 32px 0;">
-    <div class="container">
-      <div class="card space-y-4" style="border-left: 5px solid var(--navy); background-color: var(--white); padding: 24px; border: 1px solid var(--border);">
+  <!-- 7. COMPANY / PLATFORM INFORMATION -->
+  <section class="section bg-ivory" style="border-y: 1px solid var(--border);">
+    <div class="container space-y-8">
+      <div class="text-center">
+        <span class="section-eyebrow">COMPANY INFORMATION</span>
+        <h2 class="section-title">Platform & Operations Standards</h2>
+        <p style="color: var(--muted); font-size: 16px; max-width: 600px; margin: 8px auto 0 auto; line-height: 1.6;">
+          Transparency is at the heart of our platform operations. Review our key standards and disclaimers below.
+        </p>
+      </div>
+
+      <!-- 4 Platform Metric Badges -->
+      <div class="grid grid-4" style="gap: 16px;">
+        <div class="card text-center space-y-1" style="background-color: var(--white);">
+          <h3 style="color: var(--gold); font-size: 32px; font-weight: 800; margin: 0;">100%</h3>
+          <p style="color: var(--navy); font-size: 14px; font-weight: 600;">Client Data Privacy</p>
+        </div>
+        <div class="card text-center space-y-1" style="background-color: var(--white);">
+          <h3 style="color: var(--gold); font-size: 32px; font-weight: 800; margin: 0;">&lt; 15m</h3>
+          <p style="color: var(--navy); font-size: 14px; font-weight: 600;">Average Completion Time</p>
+        </div>
+        <div class="card text-center space-y-1" style="background-color: var(--white);">
+          <h3 style="color: var(--gold); font-size: 32px; font-weight: 800; margin: 0;">$0</h3>
+          <p style="color: var(--navy); font-size: 14px; font-weight: 600;">Subscription Cost</p>
+        </div>
+        <div class="card text-center space-y-1" style="background-color: var(--white);">
+          <h3 style="color: var(--gold); font-size: 32px; font-weight: 800; margin: 0;">24 / 7</h3>
+          <p style="color: var(--navy); font-size: 14px; font-weight: 600;">Instant PDF Access</p>
+        </div>
+      </div>
+
+      <!-- Legal Disclosure Box -->
+      <div class="card space-y-4" style="border-left: 5px solid var(--navy); background-color: var(--white); padding: 28px;">
         <div style="display: flex; align-items: center; gap: 10px;">
           <i data-lucide="scale" style="color: var(--navy); width: 22px; height: 22px;"></i>
-          <h2 class="section-title" style="margin: 0; font-size: 20px;">Platform Transparency</h2>
+          <h3 style="margin: 0; font-size: 20px; color: var(--navy);">Platform Operational Disclaimers</h3>
         </div>
 
-        <div class="grid grid-2" style="gap: 16px;">
-          <div style="background-color: var(--ivory); padding: 16px; border-radius: var(--radius-sm); border: 1px solid var(--border);" class="space-y-2">
-            <h4 style="color: var(--success); font-size: 14px; display: flex; align-items: center; gap: 8px;">
+        <div class="grid grid-2" style="gap: 20px;">
+          <div style="background-color: var(--ivory); padding: 18px; border-radius: var(--radius-sm); border: 1px solid var(--border);" class="space-y-2">
+            <h4 style="color: var(--success); font-size: 15px; display: flex; align-items: center; gap: 8px;">
               <i data-lucide="check-circle-2" style="width: 16px; height: 16px;"></i> What LexDraft Provides
             </h4>
-            <ul class="space-y-1" style="font-size: 13px; color: var(--navy); padding-left: 18px;">
-              <li>Self-guided automated document compiler software.</li>
-              <li>Plain-language question flows with helper tooltips.</li>
-              <li>Real-time LocalStorage browser draft saving.</li>
-              <li>Printable PDF downloads ready for signatures.</li>
+            <ul class="space-y-1" style="font-size: 14px; color: var(--navy); padding-left: 18px; line-height: 1.6;">
+              <li>Self-guided automated document preparation software.</li>
+              <li>Interactive form prompts with real-time field validation.</li>
+              <li>Client-side LocalStorage draft auto-saving.</li>
+              <li>Printable PDF generation formatted for signatures.</li>
             </ul>
           </div>
 
-          <div style="background-color: #FFFDF5; padding: 16px; border-radius: var(--radius-sm); border: 1px solid #FDE68A;" class="space-y-2">
-            <h4 style="color: var(--danger); font-size: 14px; display: flex; align-items: center; gap: 8px;">
-              <i data-lucide="alert-circle" style="width: 16px; height: 16px;"></i> What LexDraft Does NOT Claim
+          <div style="background-color: #FFFDF5; padding: 18px; border-radius: var(--radius-sm); border: 1px solid #FDE68A;" class="space-y-2">
+            <h4 style="color: var(--danger); font-size: 15px; display: flex; align-items: center; gap: 8px;">
+              <i data-lucide="alert-circle" style="width: 16px; height: 16px;"></i> Important Legal Disclaimer
             </h4>
-            <ul class="space-y-1" style="font-size: 13px; color: var(--navy); padding-left: 18px;">
-              <li>LexDraft is NOT a law firm & does NOT offer legal advice.</li>
-              <li>Does NOT replace legal counsel for complex trusts/disputes.</li>
-              <li>Does NOT guarantee specific court outcomes.</li>
-              <li>Does NOT claim government certification or legal representation.</li>
+            <ul class="space-y-1" style="font-size: 14px; color: var(--navy); padding-left: 18px; line-height: 1.6;">
+              <li>LexDraft is NOT a law firm and does NOT provide legal advice.</li>
+              <li>Does NOT replace legal counsel for complex trusts or disputes.</li>
+              <li>Does NOT provide formal court representation.</li>
+              <li>Consider consulting a licensed attorney for specific legal needs.</li>
             </ul>
           </div>
         </div>
@@ -234,14 +337,15 @@
     </div>
   </section>
 
-  <!-- Final Call to Action -->
-  <section class="section bg-navy text-white text-center" style="padding: 32px 0;">
-    <div class="container space-y-3">
-      <h2 class="section-title" style="color: var(--white); font-size: 24px;">Ready to Prepare Your Legal Document?</h2>
-      <p style="color: #94A3B8; max-width: 480px; margin: 0 auto; font-size: 14px;">Select a document wizard now and complete your draft in under 15 minutes.</p>
-      <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 12px;">
-        <a href="wizard/will.html" class="btn btn-gold btn-lg">Start Last Will & Testament</a>
-        <a href="services.html" class="btn btn-ghost btn-lg" style="color: var(--white); border-color: rgba(255,255,255,0.2);">View Full Services & FAQ</a>
+  <!-- 8. CTA BANNER -->
+  <section class="section bg-navy text-white text-center" style="padding: 44px 0;">
+    <div class="container space-y-4">
+      <h2 class="section-title" style="color: var(--white);">Ready to Experience LexDraft?</h2>
+      <p style="color: #94A3B8; max-width: 560px; margin: 0 auto; font-size: 16px; line-height: 1.6;">
+        Start preparing your Last Will, Power of Attorney, or Sworn Affidavit in minutes.
+      </p>
+      <div style="padding-top: 8px;">
+        <a href="wizard/will.html" class="btn btn-gold btn-lg">Start Document Preparation Now</a>
       </div>
     </div>
   </section>

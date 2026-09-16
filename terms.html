@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — LexDraft Legal Workspace</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Legal Pages Custom Styles */
+    .legal-hero {
+      background-color: var(--navy);
+      color: var(--white);
+      padding: 48px 0 36px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .legal-tab-btn {
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255,255,255,0.2);
+      background-color: rgba(255,255,255,0.05);
+      color: #94A3B8;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+
+    .legal-tab-btn:hover {
+      background-color: rgba(255,255,255,0.12);
+      color: var(--white);
+    }
+
+    .legal-tab-btn.active {
+      background-color: var(--gold);
+      color: var(--navy-dark);
+      border-color: var(--gold);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .legal-sidebar {
+      position: sticky;
+      top: 92px;
+      background-color: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .toc-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .toc-link:hover, .toc-link.active {
+      background-color: var(--ivory);
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    .toc-link.active {
+      border-left: 3px solid var(--gold);
+    }
+
+    .legal-content-card {
+      background-color: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+      scroll-margin-top: 100px;
+    }
+
+    .legal-content-card h3 {
+      font-size: 20px;
+      color: var(--navy);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .legal-content-card p, .legal-content-card li {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .legal-highlight-box {
+      padding: 16px 20px;
+      border-radius: var(--radius-sm);
+      margin: 16px 0;
+      font-size: 13.5px;
+      line-height: 1.6;
+    }
+
+    .legal-highlight-box.info {
+      background-color: rgba(11,31,58,0.04);
+      border-left: 4px solid var(--navy);
+      color: var(--navy);
+    }
+
+    .legal-highlight-box.warning {
+      background-color: #FFFDF5;
+      border-left: 4px solid var(--gold);
+      color: #92400E;
+    }
+
+    .legal-highlight-box.success {
+      background-color: rgba(27,127,76,0.06);
+      border-left: 4px solid var(--success);
+      color: #065F46;
+    }
+
+    .search-legal-input {
+      width: 100%;
+      padding: 10px 14px 10px 36px;
+      font-size: 13px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background-color: var(--ivory);
+      color: var(--navy);
+      outline: none;
+    }
+
+    .search-legal-input:focus {
+      border-color: var(--gold);
+      background-color: var(--white);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site Header Navbar -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <i data-lucide="scale" style="color: var(--gold);"></i>
+        Lex<span>Draft</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="home2.html" class="nav-link">Home 2</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li class="mobile-cta-item"><a href="wizard/will.html" class="btn btn-gold mobile-cta-btn">Get Started</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- RTL Direction Toggle -->
+        <button class="rtl-toggle-btn" title="Toggle Right-to-Left Layout">RTL</button>
+
+        <!-- Profile Dropdown Popover -->
+        <div class="profile-dropdown-wrapper">
+          <button class="profile-btn" aria-label="User Account Menu" title="Account Portals">
+            <i data-lucide="user"></i>
+          </button>
+          <div class="profile-dropdown-menu">
+            <div class="dropdown-header">
+              <h4>LexDraft Portals</h4>
+              <p>Client & Executive Access</p>
+            </div>
+            <ul class="dropdown-links">
+              <li><a href="login.html"><i data-lucide="log-in"></i> Account Portal Login</a></li>
+              <li><a href="login.html"><i data-lucide="user-plus"></i> Register Account</a></li>
+              <li><a href="dashboard/index.html"><i data-lucide="layout-dashboard"></i> Client Dashboard</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="wizard/will.html" class="btn btn-gold header-get-started">Get Started</a>
+        <button id="mobile-menu-btn" class="btn btn-ghost mobile-toggle-btn" aria-label="Toggle Navigation">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Legal Documentation Hero Header -->
+  <section class="legal-hero">
+    <div class="container space-y-6">
+      <div class="space-y-2">
+        <span class="section-eyebrow" style="color: var(--gold);">LEGAL & REGULATORY DOCUMENTATION</span>
+        <h1 class="hero-title" style="color: var(--white);">Terms of Service</h1>
+        <p style="color: #94A3B8; font-size: 16px; max-width: 680px; line-height: 1.6;">
+          Official platform terms governing your use of LexDraft self-guided legal document preparation tools, user obligations, and legal disclaimers.
+        </p>
+      </div>
+
+      <!-- Version & Date Badges -->
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center; font-size: 12px; color: #94A3B8;">
+        <span class="badge badge-completed" style="background: rgba(16,185,129,0.15); color: #34D399; border: 1px solid rgba(16,185,129,0.3);">
+          ✓ Effective Date: September 16, 2026
+        </span>
+        <span class="badge badge-outline" style="color: #CBD5E1; border-color: rgba(255,255,255,0.2);">
+          Version 2.4 (Statutory Compliance Update)
+        </span>
+        <span class="badge badge-outline" style="color: #CBD5E1; border-color: rgba(255,255,255,0.2);">
+          Jurisdiction: US & Global Standards
+        </span>
+      </div>
+
+      <!-- Navigation Tabs Switcher -->
+      <div style="display: flex; gap: 10px; flex-wrap: wrap; padding-top: 10px;">
+        <a href="privacy.html" class="legal-tab-btn">
+          <i data-lucide="shield-check"></i> Privacy Policy
+        </a>
+        <a href="terms.html" class="legal-tab-btn active">
+          <i data-lucide="scale"></i> Terms of Service
+        </a>
+        <a href="privacy.html#security-tab" class="legal-tab-btn">
+          <i data-lucide="lock"></i> Data Security Protocol
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Legal Documentation Container -->
+  <section class="section bg-ivory" style="padding-top: 40px; padding-bottom: 60px;">
+    <div class="container">
+      <div class="grid grid-4" style="grid-template-columns: 280px 1fr; gap: 32px; align-items: start;">
+        
+        <!-- Left Sticky Table of Contents Sidebar -->
+        <aside class="legal-sidebar space-y-4">
+          <!-- Search Box -->
+          <div style="position: relative;">
+            <i data-lucide="search" style="position: absolute; left: 10px; top: 11px; width: 16px; height: 16px; color: var(--muted);"></i>
+            <input type="text" id="legal-search-input" class="search-legal-input" placeholder="Search terms or clauses...">
+          </div>
+
+          <div style="font-size: 11px; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.08em;">
+            Table of Contents
+          </div>
+
+          <!-- Terms of Service TOC Links -->
+          <nav id="terms-toc" class="space-y-1">
+            <a href="#t-acceptance" class="toc-link active"><i data-lucide="check-circle" style="width: 15px; height: 15px;"></i> 1. Acceptance of Terms</a>
+            <a href="#t-disclaimer" class="toc-link"><i data-lucide="alert-triangle" style="width: 15px; height: 15px;"></i> 2. Non-Lawyer Disclaimer</a>
+            <a href="#t-duties" class="toc-link"><i data-lucide="edit-3" style="width: 15px; height: 15px;"></i> 3. User Responsibilities</a>
+            <a href="#t-ip" class="toc-link"><i data-lucide="file-text" style="width: 15px; height: 15px;"></i> 4. Intellectual Property</a>
+            <a href="#t-liability" class="toc-link"><i data-lucide="shield-alert" style="width: 15px; height: 15px;"></i> 5. Limitation of Liability</a>
+            <a href="#t-governing" class="toc-link"><i data-lucide="globe" style="width: 15px; height: 15px;"></i> 6. Governing Law</a>
+          </nav>
+
+          <hr style="border: none; border-top: 1px solid var(--border); margin: 12px 0;">
+
+          <button onclick="window.print()" class="btn btn-outline w-full" style="padding: 8px 12px; font-size: 12px; gap: 6px;">
+            <i data-lucide="printer" style="width: 14px; height: 14px;"></i> Print Terms Document
+          </button>
+        </aside>
+
+        <!-- Right Content Main Panel -->
+        <main id="legal-main-content">
+
+          <!-- Section 1 -->
+          <article id="t-acceptance" class="legal-content-card">
+            <h3><i data-lucide="check-circle" style="color: var(--gold);"></i> 1. Acceptance of Terms & Scope</h3>
+            <p>
+              By accessing, browsing, or utilizing the <strong>LexDraft Platform</strong> (including wizard tools, template generators, and client dashboards), you acknowledge that you have read, understood, and agreed to be bound by these Terms of Service.
+            </p>
+            <p style="margin-top: 10px;">
+              If you do not agree with any part of these terms, you must immediately discontinue use of the platform and document preparation wizards.
+            </p>
+          </article>
+
+          <!-- Section 2 -->
+          <article id="t-disclaimer" class="legal-content-card">
+            <h3><i data-lucide="alert-triangle" style="color: var(--danger);"></i> 2. Non-Lawyer & Non-Legal Advice Disclosure</h3>
+            
+            <div class="legal-highlight-box warning">
+              <strong>⚠️ CRITICAL LEGAL NOTICE:</strong> LexDraft Systems is a self-guided legal technology software platform. LexDraft is NOT a law firm and does NOT provide formal legal advice, legal representation, or legal opinions.
+            </div>
+
+            <p style="margin-top: 12px;">
+              The document templates, wizard prompts, and educational knowledge hub articles provided on this platform are for general self-help informational purposes only. Statutory requirements vary by state, province, and country. If you require legal advice for complex estate structures, contested wills, tax planning, or litigation, you should consult a qualified attorney licensed in your jurisdiction.
+            </p>
+          </article>
+
+          <!-- Section 3 -->
+          <article id="t-duties" class="legal-content-card">
+            <h3><i data-lucide="edit-3" style="color: var(--navy);"></i> 3. User Responsibilities & Data Accuracy</h3>
+            <p>
+              As a user of LexDraft self-guided document wizards, you agree to:
+            </p>
+            <ul class="space-y-2" style="padding-left: 20px; margin-top: 10px;">
+              <li>Provide true, accurate, and complete information regarding testators, principals, executors, and agents.</li>
+              <li>Verify that executed documents comply with local execution rules (such as mandatory physical witnessing, notarization, or affidavit execution).</li>
+              <li>Maintain the confidentiality of your account login credentials and local saved files.</li>
+            </ul>
+          </article>
+
+          <!-- Section 4 -->
+          <article id="t-ip" class="legal-content-card">
+            <h3><i data-lucide="file-text" style="color: var(--gold-dark);"></i> 4. Intellectual Property & Limited License</h3>
+            <p>
+              All software code, visual designs, document wizard structures, brand assets, logos, and UI components are the exclusive intellectual property of LexDraft Systems.
+            </p>
+            <p style="margin-top: 10px;">
+              LexDraft grants you a personal, non-exclusive, non-transferable, revocable license to use our wizards to generate legal documents for personal or family use. You may not reverse-engineer, scrape, resell, or duplicate our software templates for commercial SaaS redistribution.
+            </p>
+          </article>
+
+          <!-- Section 5 -->
+          <article id="t-liability" class="legal-content-card">
+            <h3><i data-lucide="shield-alert" style="color: var(--danger);"></i> 5. Limitation of Liability & Warranties</h3>
+            <p>
+              LexDraft Systems provides all software tools and document templates on an <strong>"AS IS" and "AS AVAILABLE"</strong> basis without warranties of any kind, whether express or implied.
+            </p>
+            <div class="legal-highlight-box info">
+              To the maximum extent permitted by applicable law, LexDraft Systems shall not be liable for any indirect, incidental, consequential, or punitive damages resulting from document execution errors, invalid witnessing, or failure to consult a licensed attorney.
+            </div>
+          </article>
+
+          <!-- Section 6 -->
+          <article id="t-governing" class="legal-content-card">
+            <h3><i data-lucide="globe" style="color: var(--navy);"></i> 6. Governing Law & Dispute Resolution</h3>
+            <p>
+              These Terms of Service shall be governed by and construed in accordance with standard statutory commercial laws. Any disputes arising from platform usage shall be resolved through binding good-faith arbitration prior to formal court proceedings.
+            </p>
+          </article>
+
+          <!-- Bottom Contact Legal Support Banner -->
+          <div class="card space-y-3" style="background-color: var(--white); border: 1px solid var(--border); padding: 24px; text-align: center;">
+            <i data-lucide="help-circle" style="color: var(--gold); width: 32px; height: 32px; margin: 0 auto;"></i>
+            <h4 style="font-size: 18px; color: var(--navy); margin: 0;">Have Questions Regarding Our Terms?</h4>
+            <p style="font-size: 14px; color: var(--muted); max-width: 520px; margin: 0 auto;">
+              Our compliance and legal technology team is available to clarify data privacy, browser storage protocols, or terms of service.
+            </p>
+            <div style="padding-top: 6px;">
+              <a href="contact.html" class="btn btn-gold">Contact Legal Compliance Desk →</a>
+            </div>
+          </div>
+
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full Rich 4-Column Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="color: var(--white);">Lex<span>Draft</span></a>
+          <p style="color: #94A3B8; font-size: 14px; margin-top: 12px; line-height: 1.6;">
+            LexDraft provides self-guided legal document preparation software tools. Simple, transparent, and accessible estate document generation.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Documents</h4>
+          <ul class="footer-links">
+            <li><a href="wizard/will.html">Last Will & Testament</a></li>
+            <li><a href="wizard/poa.html">Power of Attorney</a></li>
+            <li><a href="wizard/affidavit.html">Sworn Affidavit</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Legal Services & FAQ</a></li>
+            <li><a href="blogs.html">Knowledge Hub</a></li>
+            <li><a href="contact.html">Contact Support Desk</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal & Security</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="login.html">Client Sign In</a></li>
+            <li><a href="dashboard/index.html">Client Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer">
+        <strong>LEGAL DISCLAIMER:</strong> Legal requirements vary by jurisdiction. This software tool helps you prepare self-guided draft legal documents; consider consulting a licensed legal professional for specific legal advice. This platform does not provide formal legal representation or act as a law firm.
+        <div style="margin-top: 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+          <span>&copy; <span id="footer-year">2026</span> LexDraft Systems. All Rights Reserved.</span>
+          <div>
+            <a href="privacy.html" style="color: #64748B; margin-left: 16px;">Privacy Policy</a>
+            <a href="terms.html" style="color: #64748B; margin-left: 16px;">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/navigation.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Filter search logic
+      const searchInput = document.getElementById('legal-search-input');
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          const query = e.target.value.toLowerCase().trim();
+          const articles = document.querySelectorAll('.legal-content-card');
+
+          articles.forEach(article => {
+            const text = article.textContent.toLowerCase();
+            if (!query || text.includes(query)) {
+              article.style.display = 'block';
+            } else {
+              article.style.display = 'none';
+            }
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
