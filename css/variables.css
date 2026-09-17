@@ -1,33 +1,47 @@
 /* LexDraft — Color & Spacing Tokens (variables.css) */
 
 :root {
-  --navy: #0B1F3A;
-  --navy-light: #163A63;
-  --navy-dark: #061122;
-  --gold: #C8A45D;
-  --gold-light: #E8D7B2;
-  --gold-hover: #b8934b;
-  --ivory: #F8F7F3;
+  /* Rich Deep Navy Palette */
+  --navy: #0E1B2E;
+  --navy-light: #1A2D48;
+  --navy-dark: #070E1A;
+  
+  /* Luminous Metallic Gold Palette */
+  --gold: #D4AF37;
+  --gold-dark: #A3801B;
+  --gold-light: #F4E8C1;
+  --gold-hover: #C29F2C;
+  --gold-gradient: linear-gradient(135deg, #E6C255 0%, #B89222 100%);
+  --gold-glow: 0 8px 24px rgba(212, 175, 55, 0.28);
+  
+  /* Luxury Ivory & Neutral Surfaces */
+  --ivory: #FDFBF7;
+  --ivory-dark: #F5F1E8;
   --white: #FFFFFF;
-  --text: #172033;
-  --muted: #667085;
-  --border: #E5E7EB;
+  --text: #111827;
+  --muted: #64748B;
+  --border: #ECEFF2;
+  --border-light: rgba(14, 27, 46, 0.06);
 
-  --success: #1B7F4C;
-  --success-light: #E6F4ED;
-  --warning: #B7791F;
+  /* Status Colors */
+  --success: #15803D;
+  --success-light: #DCFCE7;
+  --warning: #B45309;
   --warning-light: #FEF3C7;
-  --danger: #B42318;
-  --danger-light: #FEE4E2;
+  --danger: #BE123C;
+  --danger-light: #FFE4E6;
 
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
+  /* Corner Radii */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
 
-  --shadow-sm: 0 1px 2px rgba(11,31,58,0.06);
-  --shadow-md: 0 8px 24px rgba(11,31,58,0.08);
-  --shadow-lg: 0 20px 48px rgba(11,31,58,0.12);
+  /* Ambient Soft Shadows */
+  --shadow-sm: 0 2px 8px rgba(14, 27, 46, 0.04);
+  --shadow-md: 0 10px 30px rgba(14, 27, 46, 0.07);
+  --shadow-lg: 0 22px 55px rgba(14, 27, 46, 0.10);
 
+  /* Spacing Scale */
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;

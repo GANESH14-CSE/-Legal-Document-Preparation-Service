@@ -74,7 +74,7 @@
         </p>
 
         <div style="display: flex; gap: 16px; flex-wrap: wrap; padding-top: 8px;">
-          <a href="wizard/will.html" class="btn btn-gold btn-lg">
+          <a href="services.html" class="btn btn-gold btn-lg" data-open-wizard-modal>
             <i data-lucide="play-circle"></i> Start Preparing
           </a>
           <a href="services.html" class="btn btn-outline btn-lg">
@@ -207,7 +207,7 @@
             <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">
               Organize your personal details, beneficiaries, executor information, guardianship preferences, assets and other relevant information.
             </p>
-            <div style="background-color: var(--ivory); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border);" class="space-y-1">
+            <div style="background-color: var(--ivory); padding: 12px; border-radius: var(--radius-sm);" class="space-y-1">
               <span style="font-size: 11px; font-weight: 700; color: var(--navy); text-transform: uppercase;">Key Included Fields:</span>
               <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px;">
                 <span class="badge badge-outline" style="font-size: 11px;">Personal Details</span>
@@ -233,7 +233,7 @@
             <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">
               Organize information about the principal, agent, authority and other relevant details.
             </p>
-            <div style="background-color: var(--ivory); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border);" class="space-y-1">
+            <div style="background-color: var(--ivory); padding: 12px; border-radius: var(--radius-sm);" class="space-y-1">
               <span style="font-size: 11px; font-weight: 700; color: var(--navy); text-transform: uppercase;">Key Included Fields:</span>
               <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px;">
                 <span class="badge badge-outline" style="font-size: 11px;">Principal Information</span>
@@ -259,7 +259,7 @@
             <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">
               Prepare structured information for creating a formal sworn statement.
             </p>
-            <div style="background-color: var(--ivory); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border);" class="space-y-1">
+            <div style="background-color: var(--ivory); padding: 12px; border-radius: var(--radius-sm);" class="space-y-1">
               <span style="font-size: 11px; font-weight: 700; color: var(--navy); text-transform: uppercase;">Key Included Fields:</span>
               <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px;">
                 <span class="badge badge-outline" style="font-size: 11px;">Affiant Identity</span>
@@ -311,15 +311,17 @@
               <span class="badge badge-draft">1 of 3</span>
             </div>
 
-            <div class="space-y-3" style="max-width: 520px;">
-              <div class="form-group">
-                <label class="form-label">Full Name</label>
-                <input type="text" class="input" value="Eleanor Vance" placeholder="Enter your full legal name">
-              </div>
+            <div class="space-y-4">
+              <div class="grid grid-2" style="gap: 16px;">
+                <div class="form-group">
+                  <label class="form-label">Full Name</label>
+                  <input type="text" class="input" value="Eleanor Vance" placeholder="Enter your full legal name">
+                </div>
 
-              <div class="form-group">
-                <label class="form-label">Date of Birth</label>
-                <input type="date" class="input" value="1984-06-22">
+                <div class="form-group">
+                  <label class="form-label">Date of Birth</label>
+                  <input type="date" class="input" value="1984-06-22">
+                </div>
               </div>
 
               <div class="form-group">
@@ -359,7 +361,7 @@
 
           <div class="space-y-3">
             <!-- Doc 1 -->
-            <div style="padding: 14px; background-color: var(--ivory); border-radius: var(--radius-sm); border: 1px solid var(--border);" class="space-y-2">
+            <div style="padding: 14px; background-color: var(--ivory); border-radius: var(--radius-sm);" class="space-y-2">
               <div style="display: flex; justify-content: space-between; align-items: center;">
                 <strong style="color: var(--navy); font-size: 14px;">Last Will & Testament</strong>
                 <span class="badge badge-draft">Draft</span>
@@ -372,7 +374,7 @@
             </div>
 
             <!-- Doc 2 -->
-            <div style="padding: 14px; background-color: var(--ivory); border-radius: var(--radius-sm); border: 1px solid var(--border);" class="space-y-2">
+            <div style="padding: 14px; background-color: var(--ivory); border-radius: var(--radius-sm);" class="space-y-2">
               <div style="display: flex; justify-content: space-between; align-items: center;">
                 <strong style="color: var(--navy); font-size: 14px;">Power of Attorney</strong>
                 <span class="badge badge-completed">Completed</span>
@@ -639,7 +641,7 @@
         Choose a document and follow a guided preparation experience designed to keep the process simple and organized.
       </p>
       <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; padding-top: 8px;">
-        <a href="wizard/will.html" class="btn btn-gold btn-lg">Get Started</a>
+        <a href="javascript:void(0)" data-open-wizard-modal class="btn btn-gold btn-lg">Get Started</a>
         <a href="services.html" class="btn btn-ghost btn-lg" style="color: var(--white); border-color: rgba(255,255,255,0.2);">Explore Documents</a>
       </div>
     </div>
@@ -716,15 +718,17 @@
               <span class="badge badge-draft">1 of 3</span>
             </div>
 
-            <div class="space-y-3" style="max-width: 520px;">
-              <div class="form-group">
-                <label class="form-label">Full Name</label>
-                <input type="text" class="input" value="Eleanor Vance" placeholder="Enter your full legal name">
-              </div>
+            <div class="space-y-4">
+              <div class="grid grid-2" style="gap: 16px;">
+                <div class="form-group">
+                  <label class="form-label">Full Name</label>
+                  <input type="text" class="input" value="Eleanor Vance" placeholder="Enter your full legal name">
+                </div>
 
-              <div class="form-group">
-                <label class="form-label">Date of Birth</label>
-                <input type="date" class="input" value="1984-06-22">
+                <div class="form-group">
+                  <label class="form-label">Date of Birth</label>
+                  <input type="date" class="input" value="1984-06-22">
+                </div>
               </div>
 
               <div class="form-group">
@@ -749,19 +753,21 @@
               <span class="badge badge-draft">2 of 3</span>
             </div>
 
-            <div class="space-y-3" style="max-width: 520px;">
-              <div class="form-group">
-                <label class="form-label">Name</label>
-                <input type="text" class="input" value="Arthur Vance" placeholder="Enter beneficiary full name">
-              </div>
+            <div class="space-y-4">
+              <div class="grid grid-2" style="gap: 16px;">
+                <div class="form-group">
+                  <label class="form-label">Name</label>
+                  <input type="text" class="input" value="Arthur Vance" placeholder="Enter beneficiary full name">
+                </div>
 
-              <div class="form-group">
-                <label class="form-label">Relationship</label>
-                <select class="input">
-                  <option selected>Spouse</option>
-                  <option>Son</option>
-                  <option>Daughter</option>
-                </select>
+                <div class="form-group">
+                  <label class="form-label">Relationship</label>
+                  <select class="input">
+                    <option selected>Spouse</option>
+                    <option>Son</option>
+                    <option>Daughter</option>
+                  </select>
+                </div>
               </div>
 
               <div class="form-group">
@@ -787,22 +793,22 @@
               <span class="badge badge-completed">3 of 3</span>
             </div>
 
-            <div class="space-y-2" style="max-width: 520px;">
-              <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background-color: var(--ivory); border-radius: var(--radius-sm); border: 1px solid var(--border);">
+            <div class="grid grid-2" style="gap: 12px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; background-color: var(--ivory); border-radius: var(--radius-sm);">
                 <strong style="color: var(--navy); font-size: 13px;">Personal Information</strong>
-                <span style="color: var(--success); font-weight: 700;">✓</span>
+                <span style="color: var(--success); font-weight: 700;">✓ Verified</span>
               </div>
-              <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background-color: var(--ivory); border-radius: var(--radius-sm); border: 1px solid var(--border);">
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; background-color: var(--ivory); border-radius: var(--radius-sm);">
                 <strong style="color: var(--navy); font-size: 13px;">Beneficiaries</strong>
-                <span style="color: var(--success); font-weight: 700;">✓</span>
+                <span style="color: var(--success); font-weight: 700;">✓ Verified</span>
               </div>
-              <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background-color: var(--ivory); border-radius: var(--radius-sm); border: 1px solid var(--border);">
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; background-color: var(--ivory); border-radius: var(--radius-sm);">
                 <strong style="color: var(--navy); font-size: 13px;">Executor</strong>
-                <span style="color: var(--success); font-weight: 700;">✓</span>
+                <span style="color: var(--success); font-weight: 700;">✓ Verified</span>
               </div>
-              <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background-color: var(--ivory); border-radius: var(--radius-sm); border: 1px solid var(--border);">
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; background-color: var(--ivory); border-radius: var(--radius-sm);">
                 <strong style="color: var(--navy); font-size: 13px;">Assets</strong>
-                <span style="color: var(--success); font-weight: 700;">✓</span>
+                <span style="color: var(--success); font-weight: 700;">✓ Verified</span>
               </div>
             </div>
 
