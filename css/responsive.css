@@ -120,7 +120,7 @@ img, video, canvas, iframe, object, svg {
     pointer-events: auto;
   }
 
-  /* Off-Canvas Mobile Side Drawer */
+  /* Off-Canvas Mobile Side Drawer — always dark navy regardless of theme */
   .nav-links {
     display: flex !important;
     position: fixed !important;
@@ -130,7 +130,7 @@ img, video, canvas, iframe, object, svg {
     width: 290px !important;
     max-width: 82vw !important;
     height: 100vh !important;
-    background-color: var(--navy) !important;
+    background-color: #0E1B2E !important;
     flex-direction: column !important;
     align-items: stretch !important;
     padding: 76px 20px 28px 20px !important;
@@ -188,6 +188,66 @@ img, video, canvas, iframe, object, svg {
     font-weight: 700;
   }
 
+  /* ======= Dark Mode Overrides for Mobile Header & Drawer ======= */
+  [data-theme="dark"] .mobile-toggle-btn {
+    background-color: #1A293E !important;
+    border-color: #2D3F56 !important;
+    color: #F8FAFC !important;
+  }
+
+  [data-theme="dark"] .mobile-toggle-btn svg,
+  [data-theme="dark"] .mobile-toggle-btn i {
+    stroke: #F8FAFC !important;
+    color: #F8FAFC !important;
+  }
+
+  [data-theme="dark"] .profile-btn {
+    background-color: #1A293E !important;
+    border-color: #2D3F56 !important;
+    color: #F8FAFC !important;
+  }
+
+  [data-theme="dark"] .profile-btn svg,
+  [data-theme="dark"] .profile-btn i {
+    stroke: #F8FAFC !important;
+    color: #F8FAFC !important;
+  }
+
+  [data-theme="dark"] .rtl-toggle-btn {
+    background-color: #1A293E !important;
+    border-color: #2D3F56 !important;
+    color: #E2E8F0 !important;
+  }
+
+  [data-theme="dark"] .nav-links {
+    background-color: #070D17 !important;
+    border-right-color: rgba(245, 197, 66, 0.15) !important;
+  }
+
+  [data-theme="dark"] .nav-links .nav-link {
+    color: #E2E8F0 !important;
+    border-bottom-color: rgba(255, 255, 255, 0.06) !important;
+  }
+
+  [data-theme="dark"] .nav-links .nav-link:hover,
+  [data-theme="dark"] .nav-links .nav-link.active {
+    color: #F5C542 !important;
+    background-color: rgba(245, 197, 66, 0.1) !important;
+  }
+
+  [data-theme="dark"] .mobile-cta-item {
+    border-top-color: rgba(245, 197, 66, 0.15) !important;
+  }
+
+  [data-theme="dark"] .mobile-backdrop {
+    background-color: rgba(0, 0, 0, 0.65) !important;
+  }
+
+  [data-theme="dark"] .site-header {
+    background-color: #0D1627 !important;
+    border-bottom-color: #1E2D42 !important;
+  }
+
   [dir="rtl"] .nav-links {
     left: auto !important;
     right: 0 !important;
@@ -195,6 +255,11 @@ img, video, canvas, iframe, object, svg {
     border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
     transform: translate3d(100%, 0, 0) !important;
     text-align: right;
+  }
+
+  [dir="rtl"] [data-theme="dark"] .nav-links,
+  [data-theme="dark"] [dir="rtl"] .nav-links {
+    border-left-color: rgba(245, 197, 66, 0.15) !important;
   }
 
   [dir="rtl"] .nav-links.mobile-open {
@@ -215,7 +280,7 @@ img, video, canvas, iframe, object, svg {
     width: 290px !important;
     max-width: 82vw !important;
     height: 100vh !important;
-    background-color: var(--navy) !important;
+    background-color: #0E1B2E !important;
     flex-direction: column !important;
     align-items: stretch !important;
     padding: 28px 20px !important;
