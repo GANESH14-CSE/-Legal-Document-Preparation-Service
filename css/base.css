@@ -9,8 +9,8 @@
 html {
   scroll-behavior: smooth;
   font-family: 'Plus Jakarta Sans', Arial, sans-serif;
-  background-color: var(--ivory);
-  color: var(--text);
+  background-color: var(--bg-page);
+  color: var(--body-color);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -54,7 +54,7 @@ h1, .hero-title {
   font-size: clamp(32px, 5vw, 54px);
   font-weight: 700;
   line-height: 1.15;
-  color: var(--navy);
+  color: var(--heading-color);
   letter-spacing: -0.02em;
 }
 
@@ -62,25 +62,25 @@ h2, .section-title {
   font-size: clamp(24px, 3.5vw, 36px);
   font-weight: 700;
   line-height: 1.25;
-  color: var(--navy);
+  color: var(--heading-color);
   letter-spacing: -0.01em;
 }
 
 h3 {
   font-size: clamp(18px, 2.5vw, 24px);
   font-weight: 600;
-  color: var(--navy);
+  color: var(--heading-color);
 }
 
 h4 {
   font-size: 16px;
   font-weight: 600;
-  color: var(--navy);
+  color: var(--heading-color);
 }
 
 p {
   font-size: 16px;
-  color: var(--muted);
+  color: var(--muted-color);
 }
 
 small, .text-sm {
@@ -103,15 +103,19 @@ small, .text-sm {
 }
 
 .text-gold { color: var(--gold) !important; }
-.text-navy { color: var(--navy) !important; }
-.text-muted { color: var(--muted) !important; }
-.text-white { color: var(--white) !important; }
+.text-navy { color: var(--heading-color) !important; }
+.text-muted { color: var(--muted-color) !important; }
+.text-white { color: #FFFFFF !important; }
 .text-center { text-align: center; }
 
-.bg-navy { background-color: var(--navy) !important; color: var(--white) !important; }
-.bg-navy-dark { background-color: var(--navy-dark) !important; color: var(--white) !important; }
-.bg-ivory { background-color: var(--ivory) !important; }
-.bg-white { background-color: var(--white) !important; }
+.bg-navy { background-color: #0E1B2E !important; color: #FFFFFF !important; }
+.bg-navy-dark { background-color: #070E1A !important; color: #FFFFFF !important; }
+.bg-ivory { background-color: var(--bg-page) !important; }
+.bg-white { background-color: var(--bg-surface) !important; }
+
+[data-theme="dark"] .bg-navy { background-color: #070D17 !important; color: #F8FAFC !important; }
+[data-theme="dark"] .bg-navy-dark { background-color: #050912 !important; color: #F8FAFC !important; }
+
 
 /* Focus styles for keyboard accessibility */
 :focus-visible {

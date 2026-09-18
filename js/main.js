@@ -2,6 +2,19 @@
 
 import { StorageAPI } from './storage.js';
 
+// Early Theme Application to eliminate FOUC (Flash of Unstyled Content)
+export function applyTheme(theme) {
+  if (theme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+  }
+}
+
+// Immediate execution on module load
+const initialTheme = localStorage.getItem('lexdraft_theme') || 'light';
+applyTheme(initialTheme);
+
 export function initGlobalShell() {
   // Sticky Navbar shadow on scroll
   const header = document.querySelector('.site-header');
@@ -20,6 +33,74 @@ export function initGlobalShell() {
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
+
+  // Dark / Light Theme Toggle Engine
+  const updateThemeButtons = (theme) => {
+    document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
+      const isDark = theme === 'dark';
+      btn.innerHTML = `
+        <i data-lucide="${isDark ? 'sun' : 'moon'}"></i>
+        <span>${isDark ? 'Light' : 'Dark'}</span>
+      `;
+      btn.setAttribute('title', isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+      btn.setAttribute('aria-label', isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+    });
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  };
+
+  // Ensure navbar actions container has buttons in exact order: RTL -> Dark -> Profile -> Get Started -> Mobile Menu
+  document.querySelectorAll('.nav-actions').forEach(navActions => {
+    let rtlBtn = navActions.querySelector('.rtl-toggle-btn');
+    let themeBtn = navActions.querySelector('.theme-toggle-btn');
+    const profile = navActions.querySelector('.profile-dropdown-wrapper');
+    const getStarted = navActions.querySelector('.header-get-started, .mobile-cta-btn');
+    const mobileBtn = navActions.querySelector('.mobile-toggle-btn');
+
+    if (!themeBtn) {
+      themeBtn = document.createElement('button');
+      themeBtn.className = 'theme-toggle-btn';
+      themeBtn.setAttribute('aria-label', 'Toggle Dark Mode');
+    }
+
+    if (!rtlBtn) {
+      rtlBtn = document.createElement('button');
+      rtlBtn.className = 'rtl-toggle-btn';
+      rtlBtn.setAttribute('title', 'Toggle Right-to-Left Layout');
+      rtlBtn.textContent = 'RTL';
+    }
+
+    const firstTarget = profile || getStarted || mobileBtn;
+    if (firstTarget) {
+      navActions.insertBefore(rtlBtn, firstTarget);
+      navActions.insertBefore(themeBtn, firstTarget);
+    } else {
+      navActions.appendChild(rtlBtn);
+      navActions.appendChild(themeBtn);
+    }
+  });
+
+  const activeTheme = localStorage.getItem('lexdraft_theme') || 'light';
+  applyTheme(activeTheme);
+  updateThemeButtons(activeTheme);
+
+  // Global click delegate for theme toggle buttons
+  document.addEventListener('click', (e) => {
+    const toggleBtn = e.target.closest('.theme-toggle-btn');
+    if (!toggleBtn) return;
+
+    const currentTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+    applyTheme(nextTheme);
+    localStorage.setItem('lexdraft_theme', nextTheme);
+    updateThemeButtons(nextTheme);
+
+    if (typeof window.showToast === 'function') {
+      window.showToast(`Switched to ${nextTheme === 'dark' ? 'Dark' : 'Light'} Mode`);
+    }
+  });
 
   // RTL Direction Handler
   const isRTL = localStorage.getItem('lexdraft_rtl') === 'true';
@@ -140,3 +221,4 @@ if (typeof window !== 'undefined') {
   window.showToast = showToast;
   document.addEventListener('DOMContentLoaded', initGlobalShell);
 }
+

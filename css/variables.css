@@ -6,13 +6,13 @@
   --navy-light: #1A2D48;
   --navy-dark: #070E1A;
   
-  /* Luminous Metallic Gold Palette */
+  /* Luminous 24K Metallic Premium Gold Palette */
   --gold: #D4AF37;
   --gold-dark: #A3801B;
-  --gold-light: #F4E8C1;
-  --gold-hover: #C29F2C;
-  --gold-gradient: linear-gradient(135deg, #E6C255 0%, #B89222 100%);
-  --gold-glow: 0 8px 24px rgba(212, 175, 55, 0.28);
+  --gold-light: rgba(212, 175, 55, 0.15);
+  --gold-hover: #E5BE42;
+  --gold-gradient: linear-gradient(135deg, #F7D46D 0%, #D4AF37 50%, #9B7816 100%);
+  --gold-glow: 0 8px 25px rgba(212, 175, 55, 0.4);
   
   /* Luxury Ivory & Neutral Surfaces */
   --ivory: #FDFBF7;
@@ -53,4 +53,61 @@
   --space-9: 96px;
 
   --container-max: 1200px;
+
+  /* Default Light Theme Semantic Tokens */
+  --bg-page: var(--ivory);
+  --bg-surface: var(--white);
+  --bg-surface-alt: var(--ivory-dark);
+  --heading-color: var(--navy);
+  --body-color: var(--text);
+  --muted-color: var(--muted);
+  --border-color: var(--border);
 }
+
+/* Luxury Dark Mode Tokens */
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Semantic Dark Theme Tokens */
+  --bg-page: #0B1320;
+  --bg-surface: #131E30;
+  --bg-surface-alt: #070D17;
+  --heading-color: #F8FAFC;
+  --body-color: #E2E8F0;
+  --muted-color: #94A3B8;
+  --border-color: #1E2D42;
+
+  --white: #131E30;
+  --ivory: #0B1320;
+  --ivory-dark: #070D17;
+  --navy: #F8FAFC;
+  --navy-light: #E2E8F0;
+  --navy-dark: #FFFFFF;
+  --text: #E2E8F0;
+  --muted: #94A3B8;
+  --border: #1E2D42;
+
+  /* Luminous 24K Metallic Premium Gold Adjustments for Dark Mode */
+  --gold: #F5C542;
+  --gold-dark: #D4AF37;
+  --gold-light: rgba(245, 197, 66, 0.18);
+  --gold-hover: #FFD866;
+  --gold-gradient: linear-gradient(135deg, #FFE082 0%, #F5C542 50%, #B88A1A 100%);
+  --gold-glow: 0 8px 28px rgba(245, 197, 66, 0.45);
+
+  /* Borders & Shadows */
+  --border-light: rgba(255, 255, 255, 0.08);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 22px 55px rgba(0, 0, 0, 0.65);
+
+  /* Status Colors for Dark Mode */
+  --success: #34D399;
+  --success-light: rgba(52, 211, 153, 0.15);
+  --warning: #FBBF24;
+  --warning-light: rgba(251, 191, 36, 0.15);
+  --danger: #F87171;
+  --danger-light: rgba(248, 113, 113, 0.15);
+}
+
+
