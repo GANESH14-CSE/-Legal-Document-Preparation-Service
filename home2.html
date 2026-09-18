@@ -197,83 +197,146 @@
         </p>
       </div>
 
-      <div class="grid grid-3">
+      <div class="grid grid-3" style="align-items: stretch; gap: 24px;">
         <!-- Will Card -->
-        <div class="card card-hover space-y-4" style="display: flex; flex-direction: column; justify-content: space-between;">
-          <div class="space-y-4">
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <div style="width: 48px; height: 48px; border-radius: 10px; background: rgba(200,164,93,0.12); color: var(--gold-dark); display: flex; align-items: center; justify-content: center;">
+        <div class="card card-hover" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; background-color: var(--white); border: 1px solid var(--border); padding: 24px;">
+          <div style="display: flex; flex-direction: column; flex: 1;">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+              <div style="width: 48px; height: 48px; border-radius: 10px; background: rgba(200,164,93,0.12); color: var(--gold-dark); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                 <i data-lucide="scroll" style="width: 26px; height: 26px;"></i>
               </div>
-              <h3 style="font-size: 20px; margin: 0;">Last Will & Testament</h3>
+              <h3 style="font-size: 20px; margin: 0; color: var(--navy);">Last Will & Testament</h3>
             </div>
-            <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">
-              Organize your personal details, beneficiaries, executor information, guardianship preferences, assets and other relevant information.
+            <p style="font-size: 14px; color: var(--muted); line-height: 1.6; min-height: 48px; margin: 0 0 16px 0;">
+              Organize your personal details, beneficiaries, executor nominations, guardianship preferences, and asset allocation.
             </p>
-            <div style="background-color: var(--ivory); padding: 12px; border-radius: var(--radius-sm);" class="space-y-1">
-              <span style="font-size: 11px; font-weight: 700; color: var(--navy); text-transform: uppercase;">Key Included Fields:</span>
-              <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px;">
-                <span class="badge badge-outline" style="font-size: 11px;">Personal Details</span>
-                <span class="badge badge-outline" style="font-size: 11px;">Asset Allocation</span>
-                <span class="badge badge-outline" style="font-size: 11px;">Beneficiary Shares</span>
-                <span class="badge badge-outline" style="font-size: 11px;">Executor Nomination</span>
-                <span class="badge badge-outline" style="font-size: 11px;">Guardian Designation</span>
+            <div style="background-color: var(--ivory); padding: 14px 16px; border-radius: var(--radius-sm); border: 1px solid var(--border); margin-top: auto;">
+              <span style="font-size: 11px; font-weight: 800; color: var(--navy); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; display: block;">KEY INCLUDED FIELDS:</span>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                <div style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--navy); background-color: var(--white); padding: 6px 8px; border-radius: 6px; border: 1px solid var(--border);">
+                  <i data-lucide="check" style="color: var(--gold); width: 14px; height: 14px; flex-shrink: 0;"></i>
+                  <span>Personal Details</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--navy); background-color: var(--white); padding: 6px 8px; border-radius: 6px; border: 1px solid var(--border);">
+                  <i data-lucide="check" style="color: var(--gold); width: 14px; height: 14px; flex-shrink: 0;"></i>
+                  <span>Asset Allocation</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--navy); background-color: var(--white); padding: 6px 8px; border-radius: 6px; border: 1px solid var(--border);">
+                  <i data-lucide="check" style="color: var(--gold); width: 14px; height: 14px; flex-shrink: 0;"></i>
+                  <span>Beneficiaries</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--navy); background-color: var(--white); padding: 6px 8px; border-radius: 6px; border: 1px solid var(--border);">
+                  <i data-lucide="check" style="color: var(--gold); width: 14px; height: 14px; flex-shrink: 0;"></i>
+                  <span>Executor Choice</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--navy); background-color: var(--white); padding: 6px 8px; border-radius: 6px; border: 1px solid var(--border);">
+                  <i data-lucide="check" style="color: var(--gold); width: 14px; height: 14px; flex-shrink: 0;"></i>
+                  <span>Guardianship</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--navy); background-color: var(--white); padding: 6px 8px; border-radius: 6px; border: 1px solid var(--border);">
+                  <i data-lucide="check" style="color: var(--gold); width: 14px; height: 14px; flex-shrink: 0;"></i>
+                  <span>Witness Rules</span>
+                </div>
               </div>
             </div>
           </div>
-          <a href="wizard/will.html" class="btn btn-gold w-full" style="margin-top: 12px;">Start a Will →</a>
+          <div style="padding-top: 18px; margin-top: auto;">
+            <a href="wizard/will.html" class="btn btn-gold w-full">Start a Will →</a>
+          </div>
         </div>
 
         <!-- POA Card -->
-        <div class="card card-hover space-y-4" style="display: flex; flex-direction: column; justify-content: space-between;">
-          <div class="space-y-4">
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <div style="width: 48px; height: 48px; border-radius: 10px; background: rgba(11,31,58,0.08); color: var(--navy); display: flex; align-items: center; justify-content: center;">
+        <div class="card card-hover" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; background-color: var(--white); border: 1px solid var(--border); padding: 24px;">
+          <div style="display: flex; flex-direction: column; flex: 1;">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+              <div style="width: 48px; height: 48px; border-radius: 10px; background: rgba(11,31,58,0.08); color: var(--navy); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                 <i data-lucide="briefcase" style="width: 26px; height: 26px;"></i>
               </div>
-              <h3 style="font-size: 20px; margin: 0;">Power of Attorney</h3>
+              <h3 style="font-size: 20px; margin: 0; color: var(--navy);">Power of Attorney</h3>
             </div>
-            <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">
-              Organize information about the principal, agent, authority and other relevant details.
+            <p style="font-size: 14px; color: var(--muted); line-height: 1.6; min-height: 48px; margin: 0 0 16px 0;">
+              Appoint a trusted agent to manage financial authorities, property transactions, banking, and medical care.
             </p>
-            <div style="background-color: var(--ivory); padding: 12px; border-radius: var(--radius-sm);" class="space-y-1">
-              <span style="font-size: 11px; font-weight: 700; color: var(--navy); text-transform: uppercase;">Key Included Fields:</span>
-              <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px;">
-                <span class="badge badge-outline" style="font-size: 11px;">Principal Information</span>
-                <span class="badge badge-outline" style="font-size: 11px;">Primary Agent Nomination</span>
-                <span class="badge badge-outline" style="font-size: 11px;">Financial Authorities</span>
-                <span class="badge badge-outline" style="font-size: 11px;">Healthcare Directives</span>
-                <span class="badge badge-outline" style="font-size: 11px;">Effective Date</span>
+            <div style="background-color: var(--ivory); padding: 14px 16px; border-radius: var(--radius-sm); border: 1px solid var(--border); margin-top: auto;">
+              <span style="font-size: 11px; font-weight: 800; color: var(--navy); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; display: block;">KEY INCLUDED FIELDS:</span>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                <div style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--navy); background-color: var(--white); padding: 6px 8px; border-radius: 6px; border: 1px solid var(--border);">
+                  <i data-lucide="check" style="color: var(--gold); width: 14px; height: 14px; flex-shrink: 0;"></i>
+                  <span>Principal Info</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--navy); background-color: var(--white); padding: 6px 8px; border-radius: 6px; border: 1px solid var(--border);">
+                  <i data-lucide="check" style="color: var(--gold); width: 14px; height: 14px; flex-shrink: 0;"></i>
+                  <span>Primary Agent</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--navy); background-color: var(--white); padding: 6px 8px; border-radius: 6px; border: 1px solid var(--border);">
+                  <i data-lucide="check" style="color: var(--gold); width: 14px; height: 14px; flex-shrink: 0;"></i>
+                  <span>Financial Powers</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--navy); background-color: var(--white); padding: 6px 8px; border-radius: 6px; border: 1px solid var(--border);">
+                  <i data-lucide="check" style="color: var(--gold); width: 14px; height: 14px; flex-shrink: 0;"></i>
+                  <span>Property Scope</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--navy); background-color: var(--white); padding: 6px 8px; border-radius: 6px; border: 1px solid var(--border);">
+                  <i data-lucide="check" style="color: var(--gold); width: 14px; height: 14px; flex-shrink: 0;"></i>
+                  <span>Healthcare Care</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--navy); background-color: var(--white); padding: 6px 8px; border-radius: 6px; border: 1px solid var(--border);">
+                  <i data-lucide="check" style="color: var(--gold); width: 14px; height: 14px; flex-shrink: 0;"></i>
+                  <span>Effective Terms</span>
+                </div>
               </div>
             </div>
           </div>
-          <a href="wizard/poa.html" class="btn btn-outline w-full" style="margin-top: 12px;">Create Power of Attorney →</a>
+          <div style="padding-top: 18px; margin-top: auto;">
+            <a href="wizard/poa.html" class="btn btn-outline w-full">Create Power of Attorney →</a>
+          </div>
         </div>
 
         <!-- Affidavit Card -->
-        <div class="card card-hover space-y-4" style="display: flex; flex-direction: column; justify-content: space-between;">
-          <div class="space-y-4">
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <div style="width: 48px; height: 48px; border-radius: 10px; background: rgba(27,127,76,0.08); color: var(--success); display: flex; align-items: center; justify-content: center;">
+        <div class="card card-hover" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; background-color: var(--white); border: 1px solid var(--border); padding: 24px;">
+          <div style="display: flex; flex-direction: column; flex: 1;">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+              <div style="width: 48px; height: 48px; border-radius: 10px; background: rgba(27,127,76,0.08); color: var(--success); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                 <i data-lucide="file-badge" style="width: 26px; height: 26px;"></i>
               </div>
-              <h3 style="font-size: 20px; margin: 0;">Sworn Affidavit</h3>
+              <h3 style="font-size: 20px; margin: 0; color: var(--navy);">Sworn Affidavit</h3>
             </div>
-            <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">
-              Prepare structured information for creating a formal sworn statement.
+            <p style="font-size: 14px; color: var(--muted); line-height: 1.6; min-height: 48px; margin: 0 0 16px 0;">
+              Prepare legally structured statements of truth, formal identity affirmations, and factual declarations for notary signing.
             </p>
-            <div style="background-color: var(--ivory); padding: 12px; border-radius: var(--radius-sm);" class="space-y-1">
-              <span style="font-size: 11px; font-weight: 700; color: var(--navy); text-transform: uppercase;">Key Included Fields:</span>
-              <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px;">
-                <span class="badge badge-outline" style="font-size: 11px;">Affiant Identity</span>
-                <span class="badge badge-outline" style="font-size: 11px;">Statement of Facts</span>
-                <span class="badge badge-outline" style="font-size: 11px;">Supporting Evidence</span>
-                <span class="badge badge-outline" style="font-size: 11px;">Sworn Oath Clause</span>
-                <span class="badge badge-outline" style="font-size: 11px;">Notary Jurat Block</span>
+            <div style="background-color: var(--ivory); padding: 14px 16px; border-radius: var(--radius-sm); border: 1px solid var(--border); margin-top: auto;">
+              <span style="font-size: 11px; font-weight: 800; color: var(--navy); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; display: block;">KEY INCLUDED FIELDS:</span>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                <div style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--navy); background-color: var(--white); padding: 6px 8px; border-radius: 6px; border: 1px solid var(--border);">
+                  <i data-lucide="check" style="color: var(--gold); width: 14px; height: 14px; flex-shrink: 0;"></i>
+                  <span>Affiant Identity</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--navy); background-color: var(--white); padding: 6px 8px; border-radius: 6px; border: 1px solid var(--border);">
+                  <i data-lucide="check" style="color: var(--gold); width: 14px; height: 14px; flex-shrink: 0;"></i>
+                  <span>Statement Facts</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--navy); background-color: var(--white); padding: 6px 8px; border-radius: 6px; border: 1px solid var(--border);">
+                  <i data-lucide="check" style="color: var(--gold); width: 14px; height: 14px; flex-shrink: 0;"></i>
+                  <span>Evidence Proof</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--navy); background-color: var(--white); padding: 6px 8px; border-radius: 6px; border: 1px solid var(--border);">
+                  <i data-lucide="check" style="color: var(--gold); width: 14px; height: 14px; flex-shrink: 0;"></i>
+                  <span>Sworn Oath</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--navy); background-color: var(--white); padding: 6px 8px; border-radius: 6px; border: 1px solid var(--border);">
+                  <i data-lucide="check" style="color: var(--gold); width: 14px; height: 14px; flex-shrink: 0;"></i>
+                  <span>Notary Jurat</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--navy); background-color: var(--white); padding: 6px 8px; border-radius: 6px; border: 1px solid var(--border);">
+                  <i data-lucide="check" style="color: var(--gold); width: 14px; height: 14px; flex-shrink: 0;"></i>
+                  <span>Official Stamp</span>
+                </div>
               </div>
             </div>
           </div>
-          <a href="wizard/affidavit.html" class="btn btn-outline w-full" style="margin-top: 12px;">Create Affidavit →</a>
+          <div style="padding-top: 18px; margin-top: auto;">
+            <a href="wizard/affidavit.html" class="btn btn-outline w-full">Create Affidavit →</a>
+          </div>
         </div>
       </div>
     </div>
@@ -551,165 +614,185 @@
         </p>
       </div>
 
-      <div class="grid grid-2" style="align-items: start; gap: 36px;">
+      <div class="grid grid-2" style="align-items: stretch; gap: 32px;">
 
-        <!-- Left: Interactive Session Booking Form -->
-        <div class="card space-y-5" style="background-color: var(--white); border: 1px solid var(--border); box-shadow: var(--shadow-md); padding: 32px;">
-          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 14px;">
-            <div>
-              <h3 style="color: var(--navy); font-size: 18px; margin: 0;">Schedule Your Session</h3>
-              <p style="color: var(--muted); font-size: 12px; margin-top: 2px;">Private, confidential & customized to your needs</p>
+        <!-- Left: Streamlined Interactive Booking Card -->
+        <div class="card" style="background-color: var(--white); border: 1px solid var(--border); box-shadow: var(--shadow-md); padding: 28px; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 14px; margin-bottom: 20px;">
+              <div>
+                <h3 style="color: var(--navy); font-size: 19px; margin: 0; font-weight: 700;">Schedule Your Session</h3>
+                <p style="color: var(--muted); font-size: 13px; margin: 2px 0 0 0;">Private, confidential & customized to your needs</p>
+              </div>
+              <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: var(--success); background-color: var(--success-light); padding: 5px 12px; border-radius: 20px;">
+                <span style="width: 7px; height: 7px; background-color: var(--success); border-radius: 50%; display: inline-block;"></span>
+                4 Available Today
+              </span>
             </div>
-            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: var(--success); background-color: var(--success-light); padding: 4px 10px; border-radius: 20px;">
-              <span style="width: 8px; height: 8px; background-color: var(--success); border-radius: 50%; display: inline-block;"></span>
-              4 Specialists Available Today
-            </span>
+
+            <form id="consultation-booking-form" class="space-y-4" onsubmit="event.preventDefault(); window.handleSessionBooking(event);">
+              <!-- Format Selection -->
+              <div>
+                <label style="font-size: 12px; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 8px;">Consultation Format</label>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;" id="session-type-group">
+                  <button type="button" class="btn btn-gold btn-sm session-type-btn" data-type="Video Call (30m)" style="height: 40px; font-size: 13px; font-weight: 600; border-radius: 8px; gap: 6px; padding: 0 8px;">
+                    <i data-lucide="video" style="width: 15px; height: 15px;"></i> Video (30m)
+                  </button>
+                  <button type="button" class="btn btn-outline btn-sm session-type-btn" data-type="Phone Call (20m)" style="height: 40px; font-size: 13px; font-weight: 600; border-radius: 8px; gap: 6px; padding: 0 8px;">
+                    <i data-lucide="phone" style="width: 15px; height: 15px;"></i> Phone (20m)
+                  </button>
+                  <button type="button" class="btn btn-outline btn-sm session-type-btn" data-type="Draft Review" style="height: 40px; font-size: 13px; font-weight: 600; border-radius: 8px; gap: 6px; padding: 0 8px;">
+                    <i data-lucide="file-check" style="width: 15px; height: 15px;"></i> Audit Draft
+                  </button>
+                </div>
+              </div>
+
+              <!-- Topic Selection -->
+              <div>
+                <label style="font-size: 12px; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 8px;">Discussion Topic</label>
+                <select class="input" id="session-topic" style="background-color: var(--white); border: 1px solid var(--border); height: 44px; border-radius: 8px; font-size: 14px; padding: 0 14px;" required>
+                  <option value="Will & Asset Distribution Strategy">Will & Asset Distribution Strategy</option>
+                  <option value="Executor, Beneficiary & Minor Guardian Allocation">Executor, Beneficiary & Minor Guardian Allocation</option>
+                  <option value="General & Special Power of Attorney Guidance">General & Special Power of Attorney Guidance</option>
+                  <option value="Dispute Prevention & Special Inheritance Clauses">Dispute Prevention & Special Inheritance Clauses</option>
+                  <option value="General Legal Questions & Document Verification">General Legal Questions & Document Verification</option>
+                </select>
+              </div>
+
+              <!-- Time Slot -->
+              <div>
+                <label style="font-size: 12px; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 8px;">Preferred Time Slot</label>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;" id="session-slot-group">
+                  <button type="button" class="btn btn-gold btn-sm session-slot-btn" data-slot="Today 5:30 PM" style="height: 40px; font-size: 12px; font-weight: 600; border-radius: 8px; padding: 0 6px;">
+                    Today 5:30 PM
+                  </button>
+                  <button type="button" class="btn btn-outline btn-sm session-slot-btn" data-slot="Tomorrow 11:00 AM" style="height: 40px; font-size: 12px; font-weight: 600; border-radius: 8px; padding: 0 6px;">
+                    Tmrw 11:00 AM
+                  </button>
+                  <button type="button" class="btn btn-outline btn-sm session-slot-btn" data-slot="Tomorrow 4:00 PM" style="height: 40px; font-size: 12px; font-weight: 600; border-radius: 8px; padding: 0 6px;">
+                    Tmrw 4:00 PM
+                  </button>
+                </div>
+              </div>
+
+              <!-- Contact Info -->
+              <div class="grid grid-2" style="gap: 12px;">
+                <div>
+                  <label style="font-size: 12px; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 8px;">Your Name</label>
+                  <input type="text" class="input" id="session-name" placeholder="John Doe" style="background-color: var(--white); border: 1px solid var(--border); height: 44px; border-radius: 8px; font-size: 14px; padding: 0 14px;" required>
+                </div>
+                <div>
+                  <label style="font-size: 12px; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 8px;">Phone or WhatsApp</label>
+                  <input type="tel" class="input" id="session-phone" placeholder="+91 98765 43210" style="background-color: var(--white); border: 1px solid var(--border); height: 44px; border-radius: 8px; font-size: 14px; padding: 0 14px;" required>
+                </div>
+              </div>
+
+              <!-- Booking Confirmation Alert -->
+              <div id="session-confirmation-alert" style="display: none; padding: 14px 16px; background-color: var(--success-light); border: 1px solid var(--success); border-radius: var(--radius-sm); color: var(--success); font-size: 13px; line-height: 1.5;">
+                <strong>🎉 Session Successfully Booked!</strong>
+                <div id="session-confirmation-text" style="margin-top: 4px;">Our legal specialist will contact you at your chosen time slot.</div>
+              </div>
+
+              <!-- Submit Button -->
+              <div style="padding-top: 6px;">
+                <button type="submit" class="btn btn-gold w-full" id="session-submit-btn" style="height: 48px; font-size: 15px; border-radius: 8px; font-weight: 700;">
+                  <i data-lucide="calendar-check"></i> Book Consultation Session
+                </button>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 12px; color: var(--muted); margin-top: 10px;">
+                  <i data-lucide="lock" style="width: 13px; height: 13px; color: var(--gold-dark);"></i>
+                  <span>100% Confidential under Attorney-Client Ethics</span>
+                </div>
+              </div>
+            </form>
           </div>
-
-          <form id="consultation-booking-form" class="space-y-4" onsubmit="event.preventDefault(); window.handleSessionBooking(event);">
-            <!-- Step 1: Session Format -->
-            <div class="form-group space-y-2">
-              <label class="form-label" style="font-size: 13px; font-weight: 700; color: var(--navy);">1. Choose Session Format</label>
-              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;" id="session-type-group">
-                <button type="button" class="btn btn-gold btn-sm session-type-btn" data-type="Video Call (30m)" style="font-size: 12px; padding: 10px 8px; flex-direction: column; gap: 4px;">
-                  <i data-lucide="video" style="width: 16px; height: 16px;"></i>
-                  <span>Video Call (30m)</span>
-                </button>
-                <button type="button" class="btn btn-outline btn-sm session-type-btn" data-type="Phone Call (20m)" style="font-size: 12px; padding: 10px 8px; flex-direction: column; gap: 4px;">
-                  <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
-                  <span>Phone Call (20m)</span>
-                </button>
-                <button type="button" class="btn btn-outline btn-sm session-type-btn" data-type="Document Audit" style="font-size: 12px; padding: 10px 8px; flex-direction: column; gap: 4px;">
-                  <i data-lucide="file-check" style="width: 16px; height: 16px;"></i>
-                  <span>Draft Review</span>
-                </button>
-              </div>
-            </div>
-
-            <!-- Step 2: Consultation Topic -->
-            <div class="form-group space-y-1">
-              <label class="form-label" style="font-size: 13px; font-weight: 700; color: var(--navy);">2. Select Topic for Discussion</label>
-              <select class="input" id="session-topic" required>
-                <option value="Will & Asset Distribution Strategy">Will & Asset Distribution Strategy</option>
-                <option value="Executor, Beneficiary & Minor Guardian Allocation">Executor, Beneficiary & Minor Guardian Allocation</option>
-                <option value="General & Special Power of Attorney Guidance">General & Special Power of Attorney Guidance</option>
-                <option value="Dispute Prevention & Special Inheritance Clauses">Dispute Prevention & Special Inheritance Clauses</option>
-                <option value="General Legal Questions & Document Verification">General Legal Questions & Document Verification</option>
-              </select>
-            </div>
-
-            <!-- Step 3: Select Preferred Time -->
-            <div class="form-group space-y-2">
-              <label class="form-label" style="font-size: 13px; font-weight: 700; color: var(--navy);">3. Select Preferred Time Slot</label>
-              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;" id="session-slot-group">
-                <button type="button" class="btn btn-gold btn-sm session-slot-btn" data-slot="Today, 5:30 PM" style="font-size: 12px; padding: 8px 4px;">
-                  Today 5:30 PM
-                </button>
-                <button type="button" class="btn btn-outline btn-sm session-slot-btn" data-slot="Tomorrow, 11:00 AM" style="font-size: 12px; padding: 8px 4px;">
-                  Tmrw 11:00 AM
-                </button>
-                <button type="button" class="btn btn-outline btn-sm session-slot-btn" data-slot="Tomorrow, 4:00 PM" style="font-size: 12px; padding: 8px 4px;">
-                  Tmrw 4:00 PM
-                </button>
-              </div>
-            </div>
-
-            <!-- Step 4: Contact Information -->
-            <div class="grid grid-2" style="gap: 12px;">
-              <div class="form-group space-y-1">
-                <label class="form-label" style="font-size: 13px; font-weight: 700; color: var(--navy);">Your Name</label>
-                <input type="text" class="input" id="session-name" placeholder="e.g. John Doe" required>
-              </div>
-              <div class="form-group space-y-1">
-                <label class="form-label" style="font-size: 13px; font-weight: 700; color: var(--navy);">Phone or WhatsApp</label>
-                <input type="tel" class="input" id="session-phone" placeholder="e.g. +91 98765 43210" required>
-              </div>
-            </div>
-
-            <div class="form-group space-y-1">
-              <label class="form-label" style="font-size: 13px; font-weight: 700; color: var(--navy);">Brief Question or Notes (Optional)</label>
-              <input type="text" class="input" id="session-notes" placeholder="e.g. Need advice on dividing ancestral property among two heirs...">
-            </div>
-
-            <!-- Booking Confirmation Alert (Shown after click) -->
-            <div id="session-confirmation-alert" style="display: none; padding: 14px 16px; background-color: var(--success-light); border: 1px solid var(--success); border-radius: var(--radius-sm); color: var(--success); font-size: 13px; line-height: 1.5;">
-              <strong>🎉 Session Successfully Booked!</strong>
-              <div id="session-confirmation-text" style="margin-top: 4px;">Our legal specialist will contact you at your chosen time slot. A confirmation message has been initiated.</div>
-            </div>
-
-            <button type="submit" class="btn btn-gold btn-lg" style="width: 100%;" id="session-submit-btn">
-              <i data-lucide="calendar-check"></i> Book Consultation Session
-            </button>
-            <p style="font-size: 11px; text-align: center; color: var(--muted); margin-top: 8px;">
-              🔒 100% Confidential under Attorney-Client Ethics • Zero Obligation
-            </p>
-          </form>
         </div>
 
-        <!-- Right: Certified Legal Specialists & Benefits -->
-        <div class="space-y-5">
+        <!-- Right: Matching Unified Legal Counsel Panel -->
+        <div class="card" style="background-color: var(--white); border: 1px solid var(--border); box-shadow: var(--shadow-md); padding: 28px; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
           <div>
-            <h3 style="font-size: 22px; color: var(--navy); margin-bottom: 6px;">Meet Our Legal Specialists</h3>
-            <p style="font-size: 14px; color: var(--muted); line-height: 1.6;">
-              Get dedicated face-to-face or phone guidance from experienced advocates who deal with succession, trusts, and document execution daily.
-            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 14px; margin-bottom: 20px;">
+              <div>
+                <h3 style="color: var(--navy); font-size: 19px; margin: 0; font-weight: 700;">Meet Our Legal Specialists</h3>
+                <p style="color: var(--muted); font-size: 13px; margin: 2px 0 0 0;">Dedicated advocates with active Bar Council registration</p>
+              </div>
+              <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: var(--navy); background-color: var(--ivory); border: 1px solid var(--border); padding: 5px 12px; border-radius: 20px;">
+                <i data-lucide="shield-check" style="width: 14px; height: 14px; color: var(--gold);"></i>
+                Verified Advocates
+              </span>
+            </div>
+
+            <!-- Specialist 1 -->
+            <div style="background-color: var(--ivory); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 16px; margin-bottom: 14px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                  <div style="width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--gold), var(--gold-dark)); display: flex; align-items: center; justify-content: center; color: #070E1A; font-weight: 800; font-size: 16px; flex-shrink: 0;">
+                    PN
+                  </div>
+                  <div>
+                    <h4 style="color: var(--navy); font-size: 16px; margin: 0; font-weight: 700;">Adv. Priya Narayanan</h4>
+                    <span style="font-size: 12px; color: var(--muted); font-weight: 500;">Senior Succession & Trust Counsel • 12+ Yrs</span>
+                  </div>
+                </div>
+                <span style="font-size: 12px; font-weight: 700; color: var(--gold-dark); background-color: var(--white); padding: 4px 8px; border-radius: 6px; border: 1px solid var(--border);">★ 4.9 (490+)</span>
+              </div>
+              <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px;">
+                <span style="font-size: 11px; font-weight: 600; color: var(--navy); background-color: var(--white); padding: 3px 8px; border-radius: 4px; border: 1px solid var(--border);">Family Wills</span>
+                <span style="font-size: 11px; font-weight: 600; color: var(--navy); background-color: var(--white); padding: 3px 8px; border-radius: 4px; border: 1px solid var(--border);">NRI Succession</span>
+                <span style="font-size: 11px; font-weight: 600; color: var(--navy); background-color: var(--white); padding: 3px 8px; border-radius: 4px; border: 1px solid var(--border);">Asset Division</span>
+              </div>
+            </div>
+
+            <!-- Specialist 2 -->
+            <div style="background-color: var(--ivory); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 16px; margin-bottom: 20px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                  <div style="width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #1A2D48, #0E1B2E); display: flex; align-items: center; justify-content: center; color: var(--gold); font-weight: 800; font-size: 16px; flex-shrink: 0; border: 1px solid var(--gold);">
+                    RM
+                  </div>
+                  <div>
+                    <h4 style="color: var(--navy); font-size: 16px; margin: 0; font-weight: 700;">Adv. Rohan Mehta</h4>
+                    <span style="font-size: 12px; color: var(--muted); font-weight: 500;">High Court Civil & Property Expert • 9+ Yrs</span>
+                  </div>
+                </div>
+                <span style="font-size: 12px; font-weight: 700; color: var(--gold-dark); background-color: var(--white); padding: 4px 8px; border-radius: 6px; border: 1px solid var(--border);">★ 4.8 (340+)</span>
+              </div>
+              <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px;">
+                <span style="font-size: 11px; font-weight: 600; color: var(--navy); background-color: var(--white); padding: 3px 8px; border-radius: 4px; border: 1px solid var(--border);">Power of Attorney</span>
+                <span style="font-size: 11px; font-weight: 600; color: var(--navy); background-color: var(--white); padding: 3px 8px; border-radius: 4px; border: 1px solid var(--border);">Business Trusts</span>
+                <span style="font-size: 11px; font-weight: 600; color: var(--navy); background-color: var(--white); padding: 3px 8px; border-radius: 4px; border: 1px solid var(--border);">Affidavits</span>
+              </div>
+            </div>
+
+            <!-- What You Get In Session -->
+            <div style="border-top: 1px solid var(--border); padding-top: 16px; margin-bottom: 20px;">
+              <div style="font-size: 12px; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 10px;">Every Session Includes:</div>
+              <div class="space-y-2" style="font-size: 13px; color: var(--navy);">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <i data-lucide="check" style="color: var(--gold); width: 15px; height: 15px; flex-shrink: 0;"></i>
+                  <span>Private 20–30 min face-to-face video or audio guidance</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <i data-lucide="check" style="color: var(--gold); width: 15px; height: 15px; flex-shrink: 0;"></i>
+                  <span>Line-by-line verification of your drafted clauses</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <i data-lucide="check" style="color: var(--gold); width: 15px; height: 15px; flex-shrink: 0;"></i>
+                  <span>Clear signing, witnessing & execution instructions</span>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <!-- Specialist Card 1 -->
-          <div class="card" style="background-color: var(--white); border: 1px solid var(--border); padding: 20px; display: flex; gap: 16px; align-items: flex-start;">
-            <div style="width: 52px; height: 52px; border-radius: 50%; background: linear-gradient(135deg, var(--gold), var(--gold-dark)); display: flex; align-items: center; justify-content: center; color: #070E1A; font-weight: 800; font-size: 18px; flex-shrink: 0; box-shadow: var(--shadow-sm);">
-              PN
-            </div>
-            <div class="space-y-1" style="flex: 1;">
-              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px;">
-                <strong style="color: var(--navy); font-size: 16px;">Adv. Priya Narayanan</strong>
-                <span style="color: var(--gold-dark); font-size: 12px; font-weight: 700;">★ 4.9 (490+ Reviews)</span>
-              </div>
-              <div style="font-size: 12px; color: var(--muted); font-weight: 600;">Senior Succession & Estate Planning Counsel • 12+ Yrs Bar Council</div>
-              <p style="font-size: 13px; color: var(--navy); line-height: 1.4; margin-top: 4px;">
-                "I help families structure clean, ironclad wills and appoint responsible executors to prevent any future disputes between heirs."
-              </p>
-              <div style="padding-top: 6px; display: flex; gap: 8px; flex-wrap: wrap;">
-                <span class="badge badge-outline" style="font-size: 11px;">Family Wills</span>
-                <span class="badge badge-outline" style="font-size: 11px;">NRI Property Succession</span>
-                <span class="badge badge-outline" style="font-size: 11px;">Minor Guardianship</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Specialist Card 2 -->
-          <div class="card" style="background-color: var(--white); border: 1px solid var(--border); padding: 20px; display: flex; gap: 16px; align-items: flex-start;">
-            <div style="width: 52px; height: 52px; border-radius: 50%; background: linear-gradient(135deg, #1A2D48, #0E1B2E); display: flex; align-items: center; justify-content: center; color: var(--gold); font-weight: 800; font-size: 18px; flex-shrink: 0; border: 1px solid var(--gold); box-shadow: var(--shadow-sm);">
-              RM
-            </div>
-            <div class="space-y-1" style="flex: 1;">
-              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px;">
-                <strong style="color: var(--navy); font-size: 16px;">Adv. Rohan Mehta</strong>
-                <span style="color: var(--gold-dark); font-size: 12px; font-weight: 700;">★ 4.8 (340+ Reviews)</span>
-              </div>
-              <div style="font-size: 12px; color: var(--muted); font-weight: 600;">Civil & Commercial Documentation Expert • 9+ Yrs High Court</div>
-              <p style="font-size: 13px; color: var(--navy); line-height: 1.4; margin-top: 4px;">
-                "Specialized in drafting durable Power of Attorney instruments, business succession directives, and legally binding affidavits."
-              </p>
-              <div style="padding-top: 6px; display: flex; gap: 8px; flex-wrap: wrap;">
-                <span class="badge badge-outline" style="font-size: 11px;">Power of Attorney</span>
-                <span class="badge badge-outline" style="font-size: 11px;">Business Continuity</span>
-                <span class="badge badge-outline" style="font-size: 11px;">Affidavits & Deeds</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Direct WhatsApp / Immediate connect widget -->
-          <div style="background-color: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; box-shadow: var(--shadow-sm);">
+          <!-- Bottom WhatsApp / Hotline Banner -->
+          <div style="background-color: var(--ivory); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; gap: 12px;">
             <div>
-              <strong style="color: var(--navy); font-size: 14px; display: block;">Need immediate answers?</strong>
-              <span style="font-size: 12px; color: var(--muted);">Direct legal advisory hotline & WhatsApp support</span>
+              <strong style="color: var(--navy); font-size: 13px; display: block;">Prefer Instant Chat?</strong>
+              <span style="font-size: 12px; color: var(--muted);">Direct WhatsApp legal desk</span>
             </div>
-            <a href="contact.html" class="btn btn-outline btn-sm">
-              <i data-lucide="message-square"></i> Chat with Legal Support
+            <a href="contact.html" class="btn btn-outline btn-sm" style="height: 36px; padding: 0 14px; font-size: 12px; border-radius: 6px;">
+              <i data-lucide="message-square"></i> Chat on WhatsApp
             </a>
           </div>
-
         </div>
 
       </div>
@@ -1155,6 +1238,10 @@
           }
         }
       };
+
+      if (window.lucide) {
+        lucide.createIcons();
+      }
     });
   </script>
 </body>

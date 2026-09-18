@@ -120,6 +120,12 @@
   color: var(--danger);
 }
 
+.badge-outline {
+  background-color: var(--bg-surface);
+  color: var(--navy);
+  border: 1px solid var(--border-color);
+}
+
 /* Form Controls */
 .form-group {
   display: flex;
