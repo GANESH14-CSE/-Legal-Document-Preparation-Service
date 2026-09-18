@@ -349,5 +349,20 @@
   color: var(--gold) !important;
 }
 
+/* Client Reach / Track Record Column */
+.client-reach-col {
+  border-left: 1px solid var(--border);
+  padding-left: 32px;
+}
+
+@media (max-width: 768px) {
+  .client-reach-col {
+    border-left: none !important;
+    padding-left: 0 !important;
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+  }
+}
+
 
 
